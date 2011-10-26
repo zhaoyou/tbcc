@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    zhaoyou 
+-->
+<hibernate-mapping>
+    <class name="org.fdap.entity.FdapHisAlarm" table="FdapHisAlarm" mutable="false" >
+    
+    
+        <id name="hisAlarmId" type="java.lang.Long">
+            <column name="hisAlarmId"  />
+            <generator class="native" />
+        </id>
+       
+       <many-to-one name="fdapaiinfo" class="org.fdap.entity.Fdapaiinfo" fetch="select">
+            <column name="aiguid" length="36" />
+        </many-to-one>
+       
+       <property name="alarmData" type="java.lang.Double" column="alarmData"></property>
+       
+       <property name="alarmLevel" type="java.lang.Integer" column="alarmLevel"></property>
+       
+       <property name="alarmStandard" type="java.lang.Double" column="alarmStandard"></property>
+       
+       
+       <property name="alarmType" type="java.lang.String" column="alarmType"></property>
+       
+       <property name="endTime" type="java.util.Date" column="endTime"></property>
+       
+       <property name="flag" type="java.lang.Integer" column="flag"></property>
+      
+       
+       <property name="startTime" type="java.util.Date" column="startTime"></property>
+       
+    </class>
+</hibernate-mapping>

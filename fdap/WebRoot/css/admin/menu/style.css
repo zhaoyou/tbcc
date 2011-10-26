@@ -1,0 +1,117 @@
+body{
+	text-align: center;
+}
+ul.menu {
+	list-style:none;
+	margin:0;
+	padding:0;
+	background-image: url(../../../images/admin/head/bg_head.jpg);
+	background-repeat: repeat-x;
+	height: 26px;
+}
+ul.menu * {margin:0; padding:0}
+ul.menu a {
+	display:block;
+	color:#2B2B2B;
+	text-decoration:none;
+	font-size:12px;
+}
+ul.menu a:hover{
+	display:block;
+	color:#000;
+	text-decoration:none;
+	font-size: 12px;
+}
+ul.menu li {
+	position:relative;
+	float:left;
+	margin-right:-1px;
+	height: 26px;
+
+}
+ul.menu ul {
+	position:absolute;
+	top:26px;
+	left:0;
+	display:none;
+	opacity:0;
+	list-style:none;
+	background-color: #d1d1d1;
+	height: 28px;
+}
+ul.menu ul li {
+	position:relative;
+	margin:0;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFF;
+	border-right-color: #09C;
+	border-bottom-color: #09C;
+	border-left-color: #09C;
+	height: 26px;
+	width: 148px;
+}
+ul.menu ul li a {
+	display:block;
+	background-color:#E6E6E6;
+	padding-top: 0px;
+	height:26px;
+	line-height:26px;
+	color: #000;
+	background-image: url(../../../images/admin/menu/header.gif);
+	background-repeat: repeat-x;
+}
+ul.menu ul li a:hover {
+	background-color:#0099ff;
+	line-height: 26px;
+	height: 26px;
+	color: #900;
+	background-image: url(../../../images/admin/menu/header_over.gif);
+	background-repeat: repeat-x;
+}
+ul.menu ul ul {
+	left:148px;
+	top:-2px
+}
+ul.menu .menulink {
+	font-weight:bold;
+	width:134px;
+	background-image: url(../../../images/admin/head/bg_head.jpg);
+	background-repeat: repeat-x;
+	padding-top: 7px;
+	padding-right: 7px;
+	padding-bottom: 5px;
+	padding-left: 7px;
+	font-size: 12px;
+	line-height: 14px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #FFF;
+	border-right-color: #09F;
+	border-bottom-color: #69C;
+	border-left-color: #09F;
+	font-family: "宋体";
+}
+ul.menu .menulink:hover, ul.menu .menuhover {
+	background-image: url(../../../images/admin/head/bg_head02.jpg);
+}
+ul.menu .sub {
+	background-image: url(../../../images/admin/head/icon_b.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+ul.menu .topline {
+
+}

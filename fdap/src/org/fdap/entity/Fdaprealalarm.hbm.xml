@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    zhaoyou 
+-->
+<hibernate-mapping>
+    <class name="org.fdap.entity.Fdaprealalarm" table="fdaprealalarm" >
+        <id name="realalarmid" type="java.lang.Long">
+            <column name="realalarmid" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="fdapaiinfo" class="org.fdap.entity.Fdapaiinfo" fetch="select">
+            <column name="aiguid" length="36" />
+        </many-to-one>
+        <property name="alarmdata" type="java.lang.Double">
+            <column name="alarmdata" precision="5" not-null="true" />
+        </property>
+        <property name="time" type="java.util.Date">
+            <column name="time" length="0" not-null="true" />
+        </property>
+        <property name="isrealalarm" type="java.lang.Integer">
+            <column name="isrealalarm" not-null="true" />
+        </property>
+        <property name="alarmlevel" type="java.lang.Integer">
+            <column name="alarmlevel" not-null="true" />
+        </property>
+        <property name="alarmtype" type="java.lang.String">
+            <column name="alarmtype" length="20" />
+        </property>
+        <property name="alarmstandard" type="java.lang.Double">
+            <column name="alarmstandard" precision="5" not-null="true" />
+        </property>
+        
+        <property name="orgId" type="java.lang.Long" column="orgId"></property>
+   
+    </class>
+</hibernate-mapping>

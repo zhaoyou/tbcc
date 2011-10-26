@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+   zhaoyou
+-->
+<hibernate-mapping>
+    <class name="org.fdap.entity.Fdaprefrealdata" table="fdaprefrealdata" >
+        <id name="realrefid" type="java.lang.Long">
+            <column name="realrefid" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="fdapaiinfo" class="org.fdap.entity.Fdapaiinfo" fetch="select">
+            <column name="aiguid" length="36" />
+        </many-to-one>
+        <property name="data" type="java.lang.Double">
+            <column name="data" precision="5" not-null="true" />
+        </property>
+        <property name="time" type="java.util.Date">
+            <column name="time" length="0" not-null="true" />
+        </property>
+        <property name="isalarm" type="java.lang.Integer">
+            <column name="isalarm" not-null="true" />
+        </property>
+    </class>
+    
+    
+</hibernate-mapping>

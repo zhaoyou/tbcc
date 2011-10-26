@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    zhaoyou
+-->
+ 
+<hibernate-mapping>
+    <class name="org.fdap.entity.Fdapphone" table="Fdapphone" >
+        <id name="phoneid" type="java.lang.Long">
+            <column name="phoneid" />
+            <generator class="native" />
+        </id>
+        
+        <property name="phonenumber" type="java.lang.String">
+            <column name="phonenumber" length="25" not-null="true" />
+        </property>
+        
+        <property name="messagenumber" type="java.lang.String">
+            <column name="messagenumber" length="25" not-null="true" />
+        </property>
+        
+        <property name="callcode" type="java.lang.String">
+            <column name="callcode" length="50" not-null="true" />
+        </property>
+        
+        <property name="phoneActive" type="java.lang.Integer">
+        	<column name="phoneActive" not-null="true"></column>
+        </property>
+        
+        <property name="messageActive" type="java.lang.Integer">
+        	<column name="messageActive" not-null="true"></column>
+        </property>
+       
+    </class>
+</hibernate-mapping>

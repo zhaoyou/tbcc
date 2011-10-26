@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+  zhaoyou 
+-->
+<hibernate-mapping>
+    <class name="org.fdap.entity.Fdapcarrealdata" table="fdap_view_carrealdata"  mutable="false">
+       
+        <id name="refId" type="java.lang.Long">
+            <column name="refId" />
+            <generator class="native" />
+        </id>
+        
+        <property name="projectId" type="java.lang.Long" column="projectId"></property>
+        
+        <property name="name" type="java.lang.String" column="name"></property>
+        
+        <property name="aid1" type="java.lang.Integer">
+            <column name="aid1" not-null="true" />
+        </property>
+        <property name="aid2" type="java.lang.Integer">
+            <column name="aid2" not-null="true" />
+        </property>
+        <property name="aid3" type="java.lang.Integer">
+            <column name="aid3" not-null="true" />
+        </property>
+        <property name="t1" type="java.lang.Double">
+            <column name="t1" precision="5" not-null="true" />
+        </property>
+        <property name="t2" type="java.lang.Double">
+      
+            <column name="t2" precision="5" not-null="true" />
+        </property>
+        <property name="t3" type="java.lang.Double">
+            <column name="t3" precision="5" not-null="true" />
+        </property>
+        <property name="latitude" type="java.lang.Double">
+            <column name="latitude" precision="6" not-null="true" />
+        </property>
+        <property name="latitudeDir" type="java.lang.Integer">
+            <column name="latitude_dir" not-null="true" />
+        </property>
+        <property name="longitude" type="java.lang.Double">
+            <column name="longitude" precision="7" not-null="true" />
+        </property>
+        <property name="longitudeDir" type="java.lang.Integer">
+            <column name="longitude_dir" not-null="true" />
+        </property>
+        <property name="time" type="java.util.Date">
+            <column name="time" length="0" not-null="true" />
+        </property>
+        <property name="isalarm" type="java.lang.Integer">
+            <column name="isalarm" not-null="true" />
+        </property>
+        <property name="projectNO" type="java.lang.String">
+            <column name="projectNO" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<global-forwards>
+		<forward name="index" path="/index.jsp"></forward>
+	</global-forwards>
+
+  	<action-mappings>
+  		
+  		<action path="/user"  parameter="ope" 	type="org.springframework.web.struts.DelegatingActionProxy">
+  			<forward name="index" path="/index.jsp" ></forward>	
+  		</action>
+  		
+  		<action path="/org" parameter="ope"  type="org.springframework.web.struts.DelegatingActionProxy">
+  			<forward name="leaf" path="/company.jsp"></forward>
+  			<forward name="orglistJ" path="/orglistJ.jsp"></forward>
+  			<forward name="orglistQ" path="/orglistQ.jsp"></forward>
+  		</action>
+  		
+  		
+  		<action path="/refReal" parameter="ope"
+  		type="org.springframework.web.struts.DelegatingActionProxy">
+  			<forward name="realdata" path="/realDataRef.jsp"></forward>
+  		</action>
+  		
+  		<action path="/carReal" parameter="ope"
+  		type="org.springframework.web.struts.DelegatingActionProxy">
+  				<forward name="realdata" path="/realDataCar.jsp"></forward>
+  				<forward name="realmap" path="/mapReal.jsp"></forward>
+  		</action>
+  		
+  		<action path="/realAlarm" parameter="ope"
+  		type="org.springframework.web.struts.DelegatingActionProxy">
+  				<forward name="alarmall" path="/realAlarm.jsp"></forward>
+  				<forward name="alarmcar" path="/realAlarmCar.jsp"></forward>
+  				<forward name="alarmref" path="/realAlarmRef.jsp"></forward>
+  		</action>		
+  		
+  		
+  		<action path="/refHis" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  			<forward name="refhis" path="/hisDataRef.jsp"></forward>
+  			<forward name="refhiscurve" path="/hisDataRefcurve.jsp"></forward>
+  		</action>
+  		
+  		<action path="/startUp" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  			<forward name="StartUpList" path="/hisDataStartUp.jsp"></forward>
+  		</action>
+  		
+  		<action path="/carHis" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  			<forward name="carhisList" path="/hisDataCar.jsp"></forward>
+  			<forward name="getStartup" path="/hisDataStartUp.jsp"></forward>
+  			<forward name="maphis" path="/mapHis.jsp"></forward>
+  			<forward name="maphisall" path="/mapHisall.jsp"></forward>
+  			<forward name="carcurve" path="/hiscarcurve.jsp"></forward>
+  		</action>
+  		
+  		<action path="/hisAlarm" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  			<forward name="hisAlarm" path="/hisAlarm.jsp"></forward>
+  			<forward name="statistics" path="/hisAlarmStatistics.jsp"></forward>
+  		</action>
+  	</action-mappings>
+</struts-config>
+

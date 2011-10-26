@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<!--zhaoyou   ?autoReconnect=true      -->
+<hibernate-configuration>
+
+<session-factory>
+	<!-- <property name="connection.username">root</property>
+
+	<property name="connection.url">
+		jdbc:mysql://192.168.1.134:3306/tbcc_fdap_test
+	</property>
+
+	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+	<property name="myeclipse.connection.profile">fdap</property>
+
+	<property name="connection.password">root</property>
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+	<property name="show_sql">true</property>
+	
+	 -->
+	 
+	 
+	 
+	 <property name="connection.username">sa</property>
+
+	<property name="connection.url">jdbc:sqlserver://116.231.101.235:1433;databaseName=tbcc_fdap</property>
+	
+	<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+	<!-- org.tbcc.util.MySQLServerDialect -->
+	<!--  org.hibernate.dialect.SQLServerDialect-->
+	<property name="myeclipse.connection.profile">webuser</property>
+	<property name="connection.password">1q2w3e</property>
+	<property name="connection.driver_class">
+		com.microsoft.sqlserver.jdbc.SQLServerDriver
+	</property>
+
+	<property name="show_sql">false</property>
+
+	<!-- 
+		<property name="hibernate.cache.use_second_level_cache">
+		true
+		</property>-->
+	
+
+
+	 
+	 
+	 
+	 
+
+
+	<property name="hibernate.c3p0.timeout">2000</property>
+	<property name="hibernate.c3p0.max_size">100</property>
+	<property name="hibernate.c3p0.min_size">5</property>
+	<property name="hibernate.c3p0.acquire_increment">2</property>
+	
+	
+	<mapping resource="org/fdap/entity/Fdappower.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdapproject.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdapuser.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdapref.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdaporg.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdapcarrealdata.hbm.xml" />
+	<mapping resource="org/fdap/entity/FdaprolePower.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdapaiinfo.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdaprefrealdata.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdapstoretype.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdaprealalarm.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdaprefactive.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdaprole.hbm.xml" />
+	<mapping resource="org/fdap/entity/Fdapauthcode.hbm.xml" />
+
+
+
+	<!-- 四个动态表引用的配置文件 -->
+	<mapping resource="org/fdap/entity/FdapCarHisData.hbm.xml" />
+	<mapping resource="org/fdap/entity/FdapHisAlarm.hbm.xml" />
+	<mapping resource="org/fdap/entity/FdapRefHisData.hbm.xml" />
+	<mapping resource="org/fdap/entity/FdapStartUp.hbm.xml" />
+	
+	
+	<!-- 自定义菜单菜单 -->
+	<mapping resource="org/fdap/entity/Fdaplink.hbm.xml" />
+	<!-- 电话信息 -->
+	<mapping resource="org/fdap/entity/Fdapphone.hbm.xml" />
+	<!-- 菜单组 -->
+	<mapping resource="org/fdap/entity/Fdaplinktype.hbm.xml"/>
+	<!-- 详细配置信息 -->
+	<mapping resource="org/fdap/entity/FdapConfigInfo.hbm.xml"/>
+	
+	<mapping resource="org/fdap/entity/FdapHospital.hbm.xml"/>	
+	
+</session-factory>
+
+</hibernate-configuration>

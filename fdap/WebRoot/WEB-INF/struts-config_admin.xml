@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<global-forwards>
+		<forward name="index" path="/../index.jsp" redirect="true"></forward>
+	</global-forwards>
+
+  	<action-mappings>
+  		
+  		
+  		
+  		<action path="/userconfig" parameter="ope"
+  		 type="org.springframework.web.struts.DelegatingActionProxy">
+  		 	<forward name="engineerConfig" path="/engineerConfig.jsp"></forward>
+  		 	<forward name="sysAdminConfig" path="/sysAdminConfig.jsp"></forward>
+  		 	<forward name="orgUserList" path="/orgUserList.jsp"></forward>
+  			<forward name="orgUserAdd" path="/orgUserAdd.jsp"></forward>
+  		 </action>
+  		
+  		<action path="/aiconfig" parameter="ope"
+  		 type="org.springframework.web.struts.DelegatingActionProxy">
+  		 	<forward name="aiList" path="/aiList.jsp"></forward>
+  		 	<forward name="aiAdd" path="/aiAdd.jsp"></forward>
+  		 </action>
+  		 
+  		 <action path="/refconfig" parameter="ope"
+  		 type="org.springframework.web.struts.DelegatingActionProxy">
+  		 		<forward name="list" path="/refList.jsp"></forward>
+  		 		<forward name="update" path="/refAdd.jsp"></forward>
+  		 </action>
+  		 
+  		 <action path="/projectconfig" parameter="ope"
+  		 type="org.springframework.web.struts.DelegatingActionProxy">
+  		 		<forward name="list" path="/projectList.jsp"></forward>
+  		 		<forward name="update" path="/projectAdd.jsp"></forward>
+  		 </action>
+  		 
+  		 <action path="/orgconfig" parameter="ope"
+  		 type="org.springframework.web.struts.DelegatingActionProxy">
+  		 	<forward name="main" path="/main.jsp"></forward>
+  		 	<forward name="top" path="/topOrgConfig.jsp"></forward>
+  		 	<forward name="orgList" path="/orgList.jsp"></forward>
+  		 	<forward name="orgConfig" path="/nodeOrgConfig.jsp"></forward>
+  		 </action>
+  		 
+  		 <action path="/storeconfig" parameter="ope"
+  		 type="org.springframework.web.struts.DelegatingActionProxy">
+  		 		<forward name="list" path="/refParamConfig.jsp"></forward>
+  		 		<forward name="update" path="/refParamAdd.jsp"></forward>
+  		 </action>
+  		 
+  		 <action path="/defaultdisplay" parameter="ope"
+  		 type="org.springframework.web.struts.DelegatingActionProxy">
+  		 		<forward name="defaultDisplay" path="/defaultDisplay.jsp"></forward>
+  		 </action>
+  		
+  		 <action path="/orgmapinfo" parameter="ope"
+  		 type="org.springframework.web.struts.DelegatingActionProxy">
+  		 		<forward name="mapInfo" path="/mapInfo.jsp"></forward>
+  		 </action>
+  		 
+  		 <action path="/linkconfig" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		 	<forward name="linklist" path="/linklist.jsp"></forward>
+  		 	<forward name="linkadd" path="/linkAdd.jsp"></forward>
+  		 </action>
+  		 
+  		 
+  		 <action path="/phoneconfig" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		 	<forward name="phonePage" path="/phonePage.jsp"></forward>
+  		 </action>
+  		 
+  		 <action path="/linktype" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		 	<forward name="typelist" path="/linktypelist.jsp"></forward>
+  		 	<forward name="typeadd" path="/linktypeAdd.jsp"></forward>
+  		 </action>
+  		 
+  		 <action path="/configinfo" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		 	<forward name="config" path="/configinfo.jsp"></forward>
+  		 </action>
+  		 
+  		 <action path="/hospital" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		 	<forward name="list" path="/hospitallist.jsp"></forward>
+  		 	<forward name="edit" path="/hospitaladd.jsp"></forward>
+  		 </action>
+  		 
+  	</action-mappings>
+  	
+</struts-config>
+

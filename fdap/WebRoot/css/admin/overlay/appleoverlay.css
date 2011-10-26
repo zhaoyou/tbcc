@@ -1,0 +1,57 @@
+
+/* the overlayed element */
+.apple_overlay {
+	
+	/* initially overlay is hidden */
+	display:none;
+	
+	/* growing background image */
+	background-image:url(../../../images/admin/overlay/background.png);
+	
+	/* 
+		width after the growing animation finishes
+		height is automatically calculated
+	*/
+	width:250px;		
+
+	/* some padding to layout nested elements nicely  */
+	padding:35px;
+
+	/* a little styling */	
+	font-size:11px;
+}
+
+/* default close button positioned on upper right corner */
+.apple_overlay .close {
+	background-image:url(../../../images/admin/overlay/close.png);
+	position:absolute; right:5px; top:5px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+
+
+	div.apple_overlay h2 {
+		margin:10px 0 -9px 0;
+		font-weight:bold;
+		font-size:14px;
+	}
+	
+	div.black h2 {
+		color:#fff;
+	}
+	
+	#triggers {
+		margin-top:10px;
+		text-align:center;
+	}
+	
+	#triggers img {
+		background-color:#fff;
+		padding:2px;
+		border:1px solid #ccc;
+		margin:2px 5px;
+		cursor:pointer;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+	}

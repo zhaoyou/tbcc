@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		     xmlns:aop="http://www.springframework.org/schema/aop"
+	        xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+	
+	
+	<!-- 配置一个事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 配置一个事务切面 -->
+           <tx:advice id="transAdvice" transaction-manager="transactionManager">
+           		<tx:attributes>
+           			<tx:method name="get*" read-only="true"/>
+           			<tx:method name="search*" read-only="true"/>
+           			<tx:method name="query*" read-only="true"/>
+           			<tx:method name="*" read-only="false"/>
+           		</tx:attributes>
+           </tx:advice>
+           
+           <!-- 把一个切面切入业务逻辑 -->
+           <aop:config>
+           	<aop:pointcut id="bizPoint" expression="execution( * org.fdap.biz.*.* (..))"/>
+           	<aop:advisor advice-ref="transAdvice" pointcut-ref="bizPoint"/>
+           </aop:config>
+	
+	<!-- 定义数据访问层类 -->
+	<bean id="userDao" class="org.fdap.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="orgDao" class="org.fdap.dao.impl.OrgDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="carRealDao" class="org.fdap.dao.impl.CarRealDataDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="refRealDao" class="org.fdap.dao.impl.RefRealDataDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="projectDao" class="org.fdap.dao.impl.ProjectDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+
+	<bean id="refDao" class="org.fdap.dao.impl.RefDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="carhisDao" class="org.fdap.dao.impl.CarHisDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="hisalarmDao" class="org.fdap.dao.impl.HisAlarmDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="refhisDao" class="org.fdap.dao.impl.RefHisDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="startupDao" class="org.fdap.dao.impl.StartUpDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="aiInfoDao" class="org.fdap.dao.impl.AiInfoDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	<bean id="realAlarmDao"  class="org.fdap.dao.impl.RealAlarmDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 后台定义的dao -->
+	<bean id="userConfigDao" class="org.fdap.dao.impl.UserConfigDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="orgConfigDao" class="org.fdap.dao.impl.OrgConfigDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="projectConfigDao" class="org.fdap.dao.impl.ProjectConfigDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="storeConfigDao" class="org.fdap.dao.impl.StoreConfigDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="refConfigDao" class="org.fdap.dao.impl.RefConfigDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="aiConfigDao" class="org.fdap.dao.impl.AiConfigDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="engineerDao" class="org.fdap.dao.impl.EngineerDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="sysadminDao" class="org.fdap.dao.impl.SysadminDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="defaultdisplayDao" class="org.fdap.dao.impl.DefaultDisplayDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="linkConfigDao" class="org.fdap.dao.impl.LinkConfigDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="phoneConfigDao" class="org.fdap.dao.impl.PhoneConfigDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="linktypeDao" class="org.fdap.dao.impl.LinkTypeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="configinfoDao" class="org.fdap.dao.impl.ConfigInfoDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="hospitalDao" class="org.fdap.dao.impl.HospitalDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 定义业务访问类 -->
+	<bean id="userBiz" class="org.fdap.biz.impl.UserBizImpl">
+		<property name="userDao" ref="userDao"></property>
+		<property name="orgDao" ref="orgDao"></property>
+	</bean>
+	
+	<bean id="orgBiz" class="org.fdap.biz.impl.OrgBizImpl">
+		<property name="orgDao" ref="orgDao"></property>
+	</bean>
+	
+	<bean id="carRealBiz" class="org.fdap.biz.impl.CarRealBizImpl">
+		<property name="carRealDataDao" ref="carRealDao"></property>
+		<property name="projectDao" ref="projectDao"></property>
+	</bean>
+	
+	<bean id="refRealBiz" class="org.fdap.biz.impl.RefRealBizImpl">
+		<property name="aiInfoDao" ref="aiInfoDao"></property>
+		<property name="projectDao" ref="projectDao"></property>
+		<property name="refDao" ref="refDao"></property>
+		<property name="refRealDao" ref="refRealDao"></property>
+	</bean>
+	
+
+	<bean id="carhisBiz" class="org.fdap.biz.impl.CarHisBizImpl">
+		<property name="refdao" ref="refDao"></property>
+		<property name="carhisdao" ref="carhisDao"></property>
+		<property name="getmaxminavg" ref="getmaxminavg"></property>
+	</bean>
+	
+	<bean id="hisalarmBiz" class="org.fdap.biz.impl.HisAlarmBizImpl">
+		<property name="hisalarmdao" ref="hisalarmDao"></property>
+		<property name="orgdao" ref="orgDao"></property>
+	</bean>
+	
+	<bean id="refhisBiz" class="org.fdap.biz.impl.RefHisBizImpl">
+		<property name="refdao" ref="refDao"></property>
+		<property name="projectdao" ref="projectDao"></property>
+		<property name="refhisdao" ref="refhisDao"></property>
+		<property name="getmaxminavg" ref="getmaxminavg"></property>
+	</bean>
+	
+	<bean id="startupBiz" class="org.fdap.biz.impl.StartUpBizImpl">
+		<property name="startupdao" ref="startupDao"></property>
+	</bean>
+
+	<bean id="realAlarmBiz" class="org.fdap.biz.impl.RealAlarmBizImpl">
+		<property name="projectDao" ref="projectDao"></property>
+		<property name="realAlarmDao" ref="realAlarmDao"></property>
+		<property name="orgDao" ref="orgDao"></property>
+	</bean>
+	
+	<!-- 后台定义的业务类 -->
+	<bean  id="aiConfigBiz" class="org.fdap.biz.impl.AiConfigBizImpl">
+		<property name="aiconfigdao" ref="aiConfigDao"></property>
+	</bean>
+	
+	<bean id="refConfigBiz" class="org.fdap.biz.impl.RefConfigBizImpl">
+		<property name="refConfigDao" ref="refConfigDao"></property>
+		<property name="aiConfigDao" ref="aiConfigDao"></property>
+		<property name="storeConfigDao" ref="storeConfigDao"></property>
+	</bean>
+	
+	<bean id="projectConfigBiz" class="org.fdap.biz.impl.ProjectConfigBizImpl">
+		<property name="projectConfigDao" ref="projectConfigDao"></property>
+		<property name="orgDao" ref="orgDao"></property>
+		<property name="refConfigDao" ref="refConfigDao"></property>
+		<property name="aiConfigDao" ref="aiConfigDao"></property>
+	</bean>
+	
+	<bean id="orgConfigBiz" class="org.fdap.biz.impl.OrgConfigBizImpl">
+		<property name="orgConfigDao" ref="orgConfigDao"></property>
+		<property name="orgDao" ref="orgDao"></property>
+		<property name="projectConfigDao" ref="projectConfigDao"></property>
+		<property name="refConfigDao" ref="refConfigDao"></property>
+		<property name="aiConfigDao" ref="aiConfigDao"></property>
+	</bean>
+	
+	<bean id="userConfigBiz" class="org.fdap.biz.impl.UserConfigBizImpl">
+		<property name="userconfigdao" ref="userConfigDao"></property>
+	</bean>
+	
+	<bean id="storeConfigBiz" class="org.fdap.biz.impl.StoreConfigBizImpl">
+		<property name="storeConfigDao" ref="storeConfigDao"></property>
+	</bean>
+	
+	<bean  id="engineerBiz" class="org.fdap.biz.impl.EngineerBizImpl">
+		<property name="engineerdao" ref="engineerDao"></property>
+	</bean>
+	
+	<bean  id="sysadminBiz" class="org.fdap.biz.impl.SysadminBizImpl">
+		<property name="sysadmindao" ref="sysadminDao"></property>
+	</bean>
+	
+	<bean  id="defaultDisplayBiz" class="org.fdap.biz.impl.DefaultDisplayBizImpl">
+		<property name="orgdao" ref="orgDao"></property>
+		<property name="defaultdisplaydao" ref="defaultdisplayDao"></property>
+	</bean>
+	
+	<bean  id="orgmapinfoBiz" class="org.fdap.biz.impl.OrgMapInfoBizImpl">
+		<property name="orgDao" ref="orgDao"></property>
+	</bean>
+	
+	<bean id="linkConfigBiz" class="org.fdap.biz.impl.LinkConfigBizImpl">
+		<property name="linkConfigDao" ref="linkConfigDao"></property>
+	</bean>
+	
+	<bean id="phoneConfigBiz" class="org.fdap.biz.impl.PhoneConfigBizImpl">
+		<property name="phoneconfigdao" ref="phoneConfigDao"></property>
+	</bean>
+	
+	<bean id="linkTypeBiz" class="org.fdap.biz.impl.LinkTypeBizImpl">
+		<property name="linktypedao" ref="linktypeDao"></property>
+	</bean>
+	
+	<bean id="configinfoBiz" class="org.fdap.biz.impl.ConfigInfoBizImpl">
+		<property name="configinfodao" ref="configinfoDao"></property>
+	</bean>
+	
+	<bean id="hospitalBiz" class="org.fdap.biz.impl.HospitalBizImpl">
+		<property name="hospitalDao" ref="hospitalDao"/>
+	</bean>
+	
+	<!--  定义action访问类 -->
+	
+	<bean name="/user" class="org.fdap.action.UserAction">
+		<property name="userBiz" ref="userBiz"></property>
+		<property name="linkconfigbiz" ref="linkConfigBiz"></property>
+		<property name="linktypebiz" ref="linkTypeBiz"></property>
+	</bean>
+	<bean name="/org" class="org.fdap.action.OrgAction">
+		<property name="orgBiz" ref="orgBiz"></property>
+	</bean>
+	
+	<bean name="/carReal" class="org.fdap.action.CarRealAction">
+		<property name="carRealBiz" ref="carRealBiz"></property>
+		<property name="orgBiz" ref="orgBiz"></property>
+	</bean>
+	
+	<bean name="/refReal" class="org.fdap.action.RefRealAction">
+		<property name="refRealBiz" ref="refRealBiz"></property>
+		<property name="orgBiz" ref="orgBiz"></property>
+	</bean>
+
+	<bean name="/realAlarm" class="org.fdap.action.RealAlarmAction">
+		<property name="realAlarmBiz" ref="realAlarmBiz"></property>
+		<property name="orgBiz" ref="orgBiz"></property>
+	</bean>
+
+			
+
+	<bean name="/carHis" class="org.fdap.action.CarHisAction">
+		<property name="carhisbiz" ref="carhisBiz"></property>
+		<property name="orgbiz" ref="orgBiz"></property>
+	</bean>
+	
+	<bean name="/hisAlarm" class="org.fdap.action.HisAlarmAction">
+		<property name="hisalarmbiz" ref="hisalarmBiz"></property>
+		<property name="orgbiz" ref="orgBiz"></property>
+	</bean>
+	
+	<bean name="/refHis" class="org.fdap.action.RefHisAction">
+		<property name="orgbiz" ref="orgBiz"></property>
+		<property name="refHisBiz" ref="refhisBiz"></property>
+	</bean>
+	
+	<bean name="/startUp" class="org.fdap.action.StartUpAction">
+		<property name="startupbiz" ref="startupBiz"></property>
+		<property name="orgbiz" ref="orgBiz"></property>
+		<property name="carhisbiz" ref="carhisBiz"></property>
+		<property name="refconfigbiz" ref="refConfigBiz"></property>
+	</bean>
+	
+	<!-- 该类用来计算数据的最大值、最小值和平均值 -->
+		<bean id="getmaxminavg" class="org.fdap.util.GetMaxMinAvg"></bean>
+		
+		<!-- 后台相关的action -->
+		<bean name="/admin/userconfig" class="org.fdap.action.UserConfigAction">
+			<property name="engineerbiz" ref="engineerBiz"></property>
+			<property name="sysadminbiz" ref="sysadminBiz"></property>
+			<property name="orgbiz" ref="orgBiz"></property>
+			<property name="userconfigbiz" ref="userConfigBiz"></property>
+		</bean>
+		
+		<bean name="/admin/aiconfig" class="org.fdap.action.AiConfigAction">
+			<property name="aiconfigbiz" ref="aiConfigBiz"></property>
+			<property name="refconfigbiz" ref="refConfigBiz"></property>
+		</bean>
+
+		<bean name="/admin/refconfig" class="org.fdap.action.RefConfigAction">
+			<property name="refConfigBiz" ref="refConfigBiz"></property>
+			<property name="projectConfigBiz" ref="projectConfigBiz"></property>
+			<property name="storeConfigBiz" ref="storeConfigBiz"></property>
+		</bean>
+		
+		<bean name="/admin/projectconfig" class="org.fdap.action.ProjectConfigAction">
+				<property name="projectConfigBiz" ref="projectConfigBiz"></property>
+				<property name="orgBiz" ref="orgBiz"></property>
+		</bean>
+		
+		<bean name="/admin/orgconfig" class="org.fdap.action.OrgConfigAction">
+			<property name="orgConfigBiz" ref="orgConfigBiz"></property>
+			<property name="orgBiz" ref="orgBiz"></property>
+		</bean>
+		
+		<bean name="/admin/storeconfig" class="org.fdap.action.StoreConfigAction">
+			<property name="storeConfigBiz" ref="storeConfigBiz"></property>
+		</bean>
+		
+		<bean name="/admin/defaultdisplay" class="org.fdap.action.DefaultDisplayAction">
+			<property name="defaultdisplaybiz" ref="defaultDisplayBiz"></property>
+		</bean>
+		
+		<bean name="/admin/orgmapinfo" class="org.fdap.action.OrgMapInfoAction">
+			<property name="orgmapinfoBiz" ref="orgmapinfoBiz"></property>
+		</bean>
+		
+		<bean name="/admin/linkconfig" class="org.fdap.action.LinkConfigAction">
+			<property name="linkconfigbiz" ref="linkConfigBiz"></property>
+			<property name="linktypebiz" ref="linkTypeBiz"></property>
+		</bean>
+		
+		<bean name="/admin/phoneconfig" class="org.fdap.action.PhoneConfigAction">
+			<property name="phoneconfigBiz" ref="phoneConfigBiz"></property>
+		</bean>
+		
+		<bean name="/admin/linktype" class="org.fdap.action.LinkTypeAction">
+			<property name="linktypebiz" ref="linkTypeBiz"></property>
+		</bean>
+		
+		<bean name="/admin/configinfo" class="org.fdap.action.ConfigInfoAction">
+			<property name="configinfobiz" ref="configinfoBiz"></property>
+			<property name="orgbiz" ref="orgBiz"></property>
+		</bean>
+		
+		<bean name="/admin/hospital" class="org.fdap.action.HospitalAction">
+			<property name="hospitalBiz" ref="hospitalBiz"></property>
+		</bean>
+		
+</beans>

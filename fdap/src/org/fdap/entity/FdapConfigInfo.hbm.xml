@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    zhaoyou
+-->
+ 
+<hibernate-mapping>
+    <class name="org.fdap.entity.FdapConfigInfo" table="fdap_view_configinfo" >
+       	<id name="reid" type="java.lang.Integer">
+            <column name="reid" />
+        </id>
+        <property name="aiName" type="java.lang.String">
+            <column name="ainame" length="20" not-null="true" />
+        </property>
+        <property name="oid" type="java.lang.Long">
+            <column name="oid" not-null="true" />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="type" not-null="true" />
+        </property>
+        <property name="projectNo" type="java.lang.String">
+            <column name="projectNO" not-null="true" />
+        </property>
+        <property name="refName" type="java.lang.String">
+            <column name="refname" />
+        </property>
+       
+    </class>
+</hibernate-mapping>

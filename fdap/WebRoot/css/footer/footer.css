@@ -1,0 +1,35 @@
+#footer {
+	background-image: url(../../images/footer/footer.gif);
+	height: 20px;
+	width: 1024px;
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	font-weight: normal;
+	text-align: center;
+	padding-top: 6px;
+	color: #FFF;
+	line-height: 16px;
+	font-size: 12px;
+	display: block;
+}
+*{
+margin:0;
+padding:0;}
+body{
+	width: 1024px;
+	font-family: "宋体";
+	font-size: 12px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	text-align: center;
+}
+img,h1,div{
+	border:0;
+}
+ul{
+list-style-type:none;}
+img,h1{
+	border:0;
+}

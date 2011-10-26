@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+   zhaoyou
+-->
+<hibernate-mapping>
+    <class name="org.fdap.entity.FdaprolePower" table="fdaprole_power">
+        <id name="rpid" type="java.lang.Long">
+            <column name="rpid" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="fdaprole" class="org.fdap.entity.Fdaprole" fetch="select">
+            <column name="rid" />
+        </many-to-one>
+        <many-to-one name="fdappower" class="org.fdap.entity.Fdappower" fetch="select">
+            <column name="pid" />
+        </many-to-one>
+    </class>
+    
+    
+</hibernate-mapping>

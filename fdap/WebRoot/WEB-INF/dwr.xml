@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+    "http://getahead.org/dwr/dwr20.dtd">
+<dwr>
+
+  <allow>
+
+  		<create javascript="realcar" creator="new">
+  			<param name="class" value="org.fdap.util.DWROperate"></param>
+  			<include method="getRealCarData"/>
+  			<include method="getRealAlarm"/>
+  			<include method="getAlarmTip"/>
+  			<include method="getAlarmEntryTip"/>
+  			<include method="getRefByProjectId"/>
+  			
+			<include method="getAlarmOrgTip"/>
+			
+  			<include method="getExistsAccount"/>
+  			<include method="getExistsProject" />
+  			<include method="getExistsRef" />
+  			<include method="getExistsOrg" />
+  			
+  			<include method="getUserByOid" />
+  			
+  			<include method="getExistsProjectNO" />
+
+  		</create>
+  		
+  		<convert match="org.fdap.entity.Fdapcarrealdata" converter="bean">
+  		</convert>
+  		
+  		<convert match="org.fdap.entity.Fdaprealalarm" converter="bean">
+  			<param name="include" value="alarmdata,alarmlevel,alarmstandard,alarmtype,refName,alarmDate,aiName"></param>
+  		</convert>
+  		
+  		<convert match="org.fdap.util.AlarmTip" converter="bean">
+  				<param name="include" value="oid,msg,orgName"></param>
+  		</convert>
+  		
+  		
+		<convert match="org.fdap.entity.Fdapref" converter="bean">
+			<param name="include" value="refId,name"></param>
+		</convert>
+		
+		
+		<convert match="org.fdap.entity.Fdapuser" converter="bean">
+			<param name="include" value="userid,name,password,fdaprole"></param>
+		</convert>
+		<convert match="org.fdap.entity.Fdaprole" converter="bean"></convert>
+		
+  </allow>
+
+</dwr>
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    zhaoyou 
+-->
+<hibernate-mapping>
+    <class name="org.fdap.entity.Fdaporg" table="fdaporg" lazy="false">
+        <id name="oid" type="java.lang.Long">
+            <column name="oid" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="50" not-null="true" />
+        </property>
+        <property name="account" type="java.lang.String">
+            <column name="account" length="30" not-null="true" />
+        </property>
+        <property name="telephone" type="java.lang.String">
+            <column name="telephone" length="15" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="email" length="30" />
+        </property>
+        <property name="parentId" type="java.lang.Long">
+            <column name="parentId" not-null="true" />
+        </property>
+     
+        <property name="flag" type="java.lang.Integer">
+            <column name="flag" not-null="true" />
+        </property>
+        <property name="nodetype" type="java.lang.Integer">
+            <column name="nodetype" not-null="true" />
+        </property>
+        <property name="isshowmap" type="java.lang.Integer">
+            <column name="isshowmap" not-null="true" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" length="20" />
+        </property>
+     
+     <!--  	<one-to-one name="authcode" class="org.fdap.entity.Fdapauthcode" property-ref="fdaporg"  ></one-to-one>
+    	此处配置采用了相反的操作，为了解决one-one延迟加载的问题而引用的。实际应该是授权码(1-1)企业机构配置
+    	这种配置方式与普通的多对一配置相比，最大的不同点在于“多方”表中并没有一个外键列指向“一方”的主键，而是用一个子查询的返回值来代替这个外键列值
+     -->
+     <many-to-one name="authcode" class="org.fdap.entity.Fdapauthcode">
+     	<formula>(select code.authid from fdapauthcode code where code.oid = oid )</formula>
+     </many-to-one>
+    </class>
+</hibernate-mapping>

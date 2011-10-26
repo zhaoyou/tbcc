@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    zhaoyou
+-->
+<hibernate-mapping>
+    <class name="org.fdap.entity.Fdapstoretype" table="fdapstoretype">
+        <id name="storeid" type="java.lang.Integer">
+            <column name="storeid" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="30" not-null="true" />
+        </property>
+        <property name="templowerlimit" type="java.lang.Double">
+            <column name="templowerlimit" precision="5" not-null="true" />
+        </property>
+        <property name="templowerdelay" type="java.lang.Integer">
+            <column name="templowerdelay" not-null="true" />
+        </property>
+        <property name="tempminlowerlimit" type="java.lang.Double">
+            <column name="tempminlowerlimit" precision="5" />
+        </property>
+        <property name="tempminlowerdelay" type="java.lang.Integer">
+            <column name="tempminlowerdelay" />
+        </property>
+       
+        <property name="temphighlimit" type="java.lang.Double">
+            <column name="temphighlimit" precision="5" not-null="true" />
+        </property>
+        <property name="temphighdelay" type="java.lang.Integer">
+            <column name="temphighdelay" not-null="true" />
+        </property>
+        <property name="tempmaxhighlimit" type="java.lang.Double">
+            <column name="tempmaxhighlimit" precision="5" />
+        </property>
+        <property name="tempmaxhighdelay" type="java.lang.Integer">
+            <column name="tempmaxhighdelay" />
+        </property>
+        <property name="humlowerlimit" type="java.lang.Double">
+            <column name="humlowerlimit" precision="5" not-null="true" />
+        </property>
+        <property name="humlowerdelay" type="java.lang.Integer">
+            <column name="humlowerdelay" not-null="true" />
+        </property>
+        <property name="humhighlimit" type="java.lang.Double">
+            <column name="humhighlimit" precision="5" not-null="true" />
+        </property>
+        <property name="humhighdelay" type="java.lang.Integer">
+            <column name="humhighdelay" not-null="true" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" length="20" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

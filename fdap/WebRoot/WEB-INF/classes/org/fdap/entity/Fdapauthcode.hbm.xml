@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    zhaoyou
+-->
+<hibernate-mapping>
+    <class name="org.fdap.entity.Fdapauthcode" table="fdapauthcode" lazy="true" >
+        <id name="authid" type="java.lang.Integer">
+            <column name="authid" />
+            <generator class="native" />
+        </id>
+        
+        <many-to-one name="fdaporg" class="org.fdap.entity.Fdaporg" column="oid" unique="true" fetch="select"  />
+        
+        <property name="code" type="java.lang.String">
+            <column name="code" length="40" not-null="true" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" length="20" />
+        </property>
+    </class>
+    
+</hibernate-mapping>
+

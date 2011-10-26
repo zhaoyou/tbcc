@@ -1,0 +1,138 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family: "宋体";
+	font-size: 12px;
+	text-align: center;
+	
+}
+ul{
+	list-style-type:none;}
+img, h1, div {
+	border:0;
+}
+#head {
+	width:1024px;
+	background-color: #d7eefe;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 127px;
+	
+}
+#head #banner p {
+	position: absolute;
+	top: 10px;
+	left: 888px;
+	color: #FFF;
+	background-image: url(../../images/head/icon_c.gif);
+	background-repeat: no-repeat;
+	background-position: 0px center;
+	display: block;
+	width: 120px;
+	height: 13px;
+}
+
+
+#banner li {
+	display:inline;
+	float:right;
+	margin-top: 60px;
+	margin-right: 5px;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+#head #center #nav_mail {
+	background-image: url(../../images/head/bg_head.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	height: 28px;
+	width: 1024px;
+	text-align: center;
+	margin-left: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+#nav_mail li {
+	float: left;
+}
+#head #center #nav_mail .s {
+	background-image: url(../../images/index/bg1.gif);
+	height: 32px;
+	width: 99px;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#head #center #nav_mail .a {
+	background-image: url(../../images/bg1.gif);
+	background-repeat: no-repeat;
+	display: block;
+	height: 32px;
+	width: 13px;
+}
+#head #banner {
+	height:99px;
+	background-image: url(../../images/head/head5.gif);
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+#head #center span {
+	float:right;
+	line-height:26px;
+	margin-right:14px;
+	display: block;
+	background-image: url(../../images/head/.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	text-indent: 20px;
+	padding-top: 2px;
+	width: 200px;
+	height: 26px;
+	color: #3a434a;
+}
+#head #banner .nav_b a{
+	display: block;
+	height: 24px;
+	width: 91px;
+	margin-top: 15px;
+	margin-left: 0px;
+	background-image: url(../../images/head/z.gif);
+	background-repeat: no-repeat;
+	padding-left: 0px;
+	margin-right: 48px;
+	cursor:pointer;
+}
+#head #banner .nav_b a:hover {
+	display: block;
+	height: 24px;
+	width: 91px;
+	margin-top: 15px;
+	margin-left: 0px;
+	background-image: url(../../images/head/z.gif);
+	background-repeat: no-repeat;
+	padding-left: 0px;
+	margin-right: 48px;
+	cursor:pointer;
+}
+
+#nav {
+	height: 28px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(../../images/head/bg_head.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	width: 1024px;
+	float: left;
+}

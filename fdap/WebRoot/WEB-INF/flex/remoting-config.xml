@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service" 
+    class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+
+	 <!-- 查询某机构的历史报警统计 -->
+	 <destination id="hisalarm">
+	 		<properties>
+	 			<source>org.fdap.flex.HisAlarmCount</source>
+	 		</properties>
+	 </destination>
+	 
+	  <!-- 这里是根据启停记录查询移动车载的数据的 -->
+	 <destination id="hiscar">
+	 	<properties>
+	 		<source>org.fdap.flex.RemoteHisCar</source>
+	 	</properties>
+	 </destination>
+	 
+	 <!-- 查询仓库冷库历史数据的 -->
+	 <destination id="hisref">
+	 	<properties>
+	 		<source>org.fdap.flex.RemoteHisRef</source>
+	 	</properties>
+	 </destination>
+</service>

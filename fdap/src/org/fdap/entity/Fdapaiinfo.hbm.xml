@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    zhaoyou
+-->
+ 
+<hibernate-mapping>
+    <class name="org.fdap.entity.Fdapaiinfo" table="fdapaiinfo" >
+        <id name="aiguid" type="java.lang.String">
+            <column name="aiguid" length="36" />
+            <generator class="guid" />
+        </id>
+        
+        <many-to-one name="fdapref" class="org.fdap.entity.Fdapref" fetch="select"  >
+            <column name="refId"  />
+        </many-to-one>
+        
+        <property name="reid" type="java.lang.Integer">
+            <column name="reid" not-null="true" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="20" not-null="true" />
+        </property>
+        <property name="selftype" type="java.lang.Integer">
+            <column name="selftype" not-null="true" />
+        </property>
+        <property name="location" type="java.lang.Integer">
+            <column name="location" />
+        </property>
+        <property name="lowerlimit" type="java.lang.Double">
+            <column name="lowerlimit" precision="5" not-null="true" />
+        </property>
+        <property name="lowerdelay" type="java.lang.Integer">
+            <column name="lowerdelay" not-null="true" />
+        </property>
+        <property name="minlowerlimit" type="java.lang.Double">
+            <column name="minlowerlimit" precision="5" />
+        </property>
+        <property name="minlowerdelay" type="java.lang.Integer">
+            <column name="minlowerdelay" />
+        </property>
+        <property name="highlimit" type="java.lang.Double">
+            <column name="highlimit" precision="5" not-null="true" />
+        </property>
+        <property name="highdelay" type="java.lang.Integer">
+            <column name="highdelay" not-null="true" />
+        </property>
+        <property name="maxhighlimit" type="java.lang.Double">
+            <column name="maxhighlimit" precision="5" />
+        </property>
+        <property name="maxhighdelay" type="java.lang.Integer">
+            <column name="maxhighdelay" />
+        </property>
+       
+    </class>
+</hibernate-mapping>

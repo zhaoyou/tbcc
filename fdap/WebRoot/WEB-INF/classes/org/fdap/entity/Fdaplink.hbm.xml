@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    zhoukuanwei
+-->
+<hibernate-mapping>
+    <class name="org.fdap.entity.Fdaplink" table="fdaplink">
+        <id name="lid" type="java.lang.Long">
+            <column name="lid" />
+            <generator class="native" />
+        </id>
+        <property name="ltid" type="java.lang.Long" column="ltid">
+        </property>
+        
+        <property name="name" type="java.lang.String">
+            <column name="name" length="30" not-null="true" />
+        </property>
+        <property name="url" type="java.lang.String">
+            <column name="url" length="30" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

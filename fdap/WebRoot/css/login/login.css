@@ -1,0 +1,78 @@
+* {
+	padding:0;
+	margin:0
+}
+body {
+	width: 990px;
+	font-size: 14px;
+	margin:0 auto;
+	color: #16395C;
+	font-weight: normal;
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	background-color: #e6f4ff;
+}
+#center {
+	padding-top: 80px;
+	padding-right: 272px;
+	padding-bottom: 0px;
+	padding-left: 272px;
+	height: 369px;
+	width: 480px;
+}
+
+	
+img,h1{
+	border:0;
+}
+ul{
+list-style:none;}
+.center {
+	margin-top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.center .center {
+	height: 286px;
+	width: 294px;
+	background-image: url(../../images/login/bg.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.input_dd {
+	width:140px;
+	height:18px;
+	background-color:#fff;
+	color:#333;
+	font-size:12px;
+	line-height:14px;
+	margin-top: 4px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 4px;
+	display: block;
+	margin-left: 0px;
+	border: 1px solid #bec0bf;
+	
+}
+.center .center table tr td table tr td .font {
+	font-family: "宋体";
+	font-size: 12px;
+	text-align: center;
+	color: #F00;
+	display: block;
+}
+.center .center table tr td table tr td img {
+	float: left;
+	margin-top: 4px;
+	margin-left: 0px;
+}
+.center .center table tr td table tr td .img {
+	margin-top: 4px;
+	margin-left: 4px;
+	padding-top: 0px;
+	display: block;
+}

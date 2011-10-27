@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccUser" table="TbccUser" schema="dbo" >
+
+        <id name="id" type="java.lang.Long">
+                <column name="Id" />
+                <generator class="native"></generator>
+        </id>
+            
+        <property name="uname" type="java.lang.String">
+            <column name="uName" length="50" not-null="true" />
+        </property>
+        
+        <property name="upassword" type="java.lang.String">
+            <column name="uPassword" length="50" not-null="true" />
+        </property>
+        
+        <!-- 用户和数据业务逻辑对象配置关联关系 -->
+
+        <many-to-one name="dataRoles" column="DataRoleID" class="org.tbcc.entity.TbccDataRoles" lazy="false"></many-to-one>
+       
+       <!-- 后来添加的代码 -->
+       	<many-to-one name="client" column="ClientID" class="org.tbcc.entity.TbccClient"></many-to-one>
+       
+        
+        
+        
+        <property name="uenable" type="java.lang.Integer">
+            <column name="uEnable" not-null="true" />
+        </property>
+        
+        
+        <property name="ucreated" type="java.lang.String">
+            <column name="uCreated" length="50" not-null="true" />
+        </property>
+        
+        
+        
+    </class>
+</hibernate-mapping>

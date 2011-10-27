@@ -1,0 +1,1 @@
+1.hisreflsit.jsp页面中的	String[] aa = (String[])hisdata ;更改成了null。

@@ -1,0 +1,63 @@
+#right #center #bd3 tr td .bb {
+	background-image: url(../../images/chezai/begin.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 58px;
+	float: left;
+	display: block;
+	height: 21px;
+	line-height: 25px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-bottom: 0px;
+	margin-left: 4px;
+	text-align: center;
+	cursor:pointer;
+	border:0;
+}
+#right #center #bd3 tr td .cc {
+	background-image: url(../../images/chezai/out.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 58px;
+	float: left;
+	display: block;
+	height: 21px;
+	line-height: 25px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-bottom: 0px;
+	margin-left: 4px;
+	text-align: center;
+	cursor:pointer;
+	border:0;
+}
+#right #center #bd3 tr td .dd {
+	background-image: url(../../images/chezai/stop.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 58px;
+	float: left;
+	display: block;
+	height: 21px;
+	line-height: 25px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-bottom: 0px;
+	margin-left: 4px;
+	text-align: center;
+	cursor:pointer;
+	border:0;
+}

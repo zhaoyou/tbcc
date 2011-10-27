@@ -1,0 +1,205 @@
+* {
+	padding:0;
+	margin:0
+}
+body {
+	width: 990px;
+	font-size: 14px;
+	margin:0 auto;
+	color: #16395C;
+	font-weight: normal;
+	background-image: url(../../images/login/bg.gif);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+}
+#center {
+	padding-top: 80px;
+	padding-right: 272px;
+	padding-bottom: 0px;
+	padding-left: 272px;
+	height: 369px;
+	width: 480px;
+}
+
+	
+img,h1{
+	border:0;
+}
+ul{
+list-style:none;}
+
+#center div h2 {
+	background-image: url(../../images/login/66_05.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 186px;
+	width: 480px;
+	display: block;
+}
+#center div #con_left {
+	background-image: url(../../images/login/login_10.gif);
+	background-repeat: repeat-x;
+	height: 183px;
+	width: 96px;
+	float: left;
+}
+#center div #con_center {
+	background-image: url(../../images/login/login_15.gif);
+	background-repeat: no-repeat;
+	height: 183px;
+	width: 278px;
+	float: left;
+	padding-top: 0px;
+}
+#center div #con_right {
+	background-image: url(../../images/login/login_11.gif);
+	background-repeat: no-repeat;
+	height: 183px;
+	width: 106px;
+	float: left;
+}
+#center div #con_bottom {
+	background-image: url(../../images/login/bottom.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 64px;
+	width: 480px;
+	
+}
+#center div #con_center table tr {
+	height: 26px;
+	line-height: 26px;
+}
+
+
+#center div #con_center table tr td label .input_aa {
+	width:160px;
+	height:18px;
+	border-bottom:#D4D0C8 solid 1px;
+	border-right:#D4D0C8 solid 1px;
+	border-top:#808080 solid 1px;
+	border-left:#808080 solid 1px;
+	background-color:#fff;
+	color:#333;
+	font-size:12px;
+	line-height:14px;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0px;
+	margin-left: 0;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 4px;
+	display: block;
+}
+#center div #con_center table tr td h5 {
+	font-size: 14px;
+	font-weight: normal;
+	color: #000;
+	text-align: right;
+	width: 90px;
+}
+
+#center div #con_center table tr td img {
+	float: left;
+	display: block;
+	height: 16px;
+	width: 43px;
+}
+
+#center div #con_center table tr td .input_bb {
+	width:180px;
+	height:18px;
+	border-bottom:#D4D0C8 solid 1px;
+	border-right:#D4D0C8 solid 1px;
+	border-top:#808080 solid 1px;
+	border-left:#808080 solid 1px;
+	background-color:#fff;
+	color:#333;
+	font-size:12px;
+	line-height:14px;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 4px;
+	display: block;
+	margin-left: 2px;
+	
+}
+#center div #con_center table tr td .input_dd {width:180px;
+	height:18px;
+	border-bottom:#D4D0C8 solid 1px;
+	border-right:#D4D0C8 solid 1px;
+	border-top:#808080 solid 1px;
+	border-left:#808080 solid 1px;
+	background-color:#fff;
+	color:#333;
+	font-size:12px;
+	line-height:14px;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 4px;
+	display: block;
+	margin-left: 2px;
+	
+}
+
+#center div #con_center table tr td .input_cc {
+	width:70px;
+	height:18px;
+	border-bottom:#D4D0C8 solid 1px;
+	border-right:#D4D0C8 solid 1px;
+	border-top:#808080 solid 1px;
+	border-left:#808080 solid 1px;
+	background-color:#fff;
+	color:#333;
+	font-size:12px;
+	line-height:14px;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0px;
+	margin-left: 0;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 4px;
+	display: block;
+	
+	
+}
+#center div #con_center table tr td table tr td span {
+	display: block;
+	height: 35px;
+	width: 60px;
+	padding: 0px;
+}
+#center div #con_center table tr td .photo {
+	height: 30px;
+	width: 80px;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-left: 190px;
+}
+#center div #con_center table tr td .photo {
+	height: 30px;
+	width: 80px;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-left: 10px;
+	cursor:pointer;
+}
+
+#center div #con_center table tr td table tr td span {float: left;
+	line-height: 32px;
+	height: 32px;
+	width: 150px;
+	display: block;
+}

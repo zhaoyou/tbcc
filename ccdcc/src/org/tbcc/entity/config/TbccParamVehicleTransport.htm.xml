@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping >
+	<class name="org.tbcc.entity.config.TbccParamVehicleTransport" table="TbccParaVehicleTransport">
+		<id name="id" column="id" type="java.lang.Long">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="beginAddress"></property>
+		<property name="endAddress"></property>
+		<property name="shipper"></property>
+		<property name="carrier"></property>
+		<property name="receiver"></property>
+	</class>
+</hibernate-mapping>

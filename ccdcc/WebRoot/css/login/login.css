@@ -1,0 +1,160 @@
+* {
+	padding:0;
+	margin:0
+}
+body {
+	width: 990px;
+	font-size: 12px;
+	margin:0 auto;
+	color: #16395C;
+	font-weight: normal;
+}
+	
+img,h1{
+	border:0;
+}
+ul{
+list-style:none;}
+.clear {
+	clear:both;
+	background-color: #FFFFFF;
+}
+#header {
+	height: 116px;
+	width: 990px;
+	background-image: url(../../images/login/header.gif);
+	background-repeat: no-repeat;
+}
+#con_left {
+	float: left;
+	height: 304px;
+	width: 279px;
+	background-image: url(../../images/login/login_lef.gif);
+	background-repeat: no-repeat;
+}
+#con_center {
+	float: left;
+}
+#con_right {
+	float: left;
+	height: 304px;
+	width: 281px;
+	background-image: url(../../images/login/login_wel.gif);
+	background-repeat: no-repeat;
+}
+#bottom {
+	background-image: url(../../images/login/login_right.gif);
+	float: left;
+	height: 107px;
+	width: 990px;
+	background-repeat: no-repeat;
+}
+#footer {
+	background-image: url(../../images/login/footer.gif);
+	background-repeat: no-repeat;
+	height: 80px;
+	width: 990px;
+	text-align: center;
+	padding-top: 150px;
+	line-height: 20px;
+}
+#con_center h2 {
+	background-image: url(../../images/login/menu_h2.gif);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 430px;
+	line-height: 26px;
+	text-indent: -9999px;	
+}
+#con_center #login_bg {
+	background-color: #eff4fa;
+	height: 134px;
+	width: 428px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #81a9cc;
+	border-left-color: #81a9cc;
+}
+#con_center #img {
+	background-image: url(../../images/login/login_pic.gif);
+	background-repeat: no-repeat;
+	height: 93px;
+	width: 430px;
+}
+#con_center #left {
+	float: left;
+	height: 134px;
+	width: 169px;
+	background-image: url(../../images/login/icon-login-seaver.gif);
+	background-repeat: no-repeat;
+}
+#con_center #login {
+	height: 134px;
+	width: 260px;
+	float: left;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #82a9d2;
+	background-color: #eff4fa;
+}
+#con_center #login #logotitle {
+	background-image: url(../../images/login/login_a.gif);
+	background-repeat: no-repeat;
+	height: 33px;
+	width: 260px;
+}
+#con_center #login form {
+	height: 134px;
+	width: 250px;
+}
+#con_center #login label {
+	margin-right: 5px;
+	float: left;
+	width: 56px;
+	line-height: 18px;
+	height: 16px;
+	display: block;
+}
+#con_center #login .input_aa {
+	width: 138px;
+	border: 1px solid #73bad7;
+}
+#con_center #login img {
+}
+
+#con_center #login .input_bb {
+	width: 58px;
+	border: 1px solid #73bad7;
+}
+#con_center #login p {
+	padding-top: 2px;
+}
+#con_center #login span {
+	padding-left: 4px;
+	margin-left: 4px;
+}
+#con_center #login img {
+}
+#con_center #topline {
+	background-image: url(../../images/login/menu_topline.gif);
+	background-repeat: no-repeat;
+	float: left;
+	background-position: 0px 0px;
+	height: 51px;
+	width: 430px;
+}
+#con_center #topline span {
+	padding-left: 170px;
+	padding-top: 1px;
+	margin-top: 1px;
+	float: left;
+}
+#con_center #topline img {
+	padding-top: 0px;
+	display:block;
+	padding-left:10px;
+	float: left;
+	
+}

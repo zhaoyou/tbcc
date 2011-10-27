@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <!-- ActionForm配置 后来增加总部用户以后、就取消actionform的配置了
+  <form-beans>
+  	<form-bean name="userform" type="org.tbcc.struts.form.UserForm"></form-bean>
+  </form-beans>
+  -->
+  <!-- 全局异常配置
+  <global-exceptions>
+  	<exception key="biz" type="java.lang.Exception" path="/common/error.jsp"></exception>
+  </global-exceptions>
+   -->
+   
+   
+  <!-- 全局转发配置 -->
+  <global-forwards>
+  	<forward name="index" path="/index.jsp"></forward>
+  </global-forwards>
+  
+  <!-- action配置 -->
+  <action-mappings>
+  
+  
+  	<!-- 配置系统的常用的action -->
+  	<action path="/user" parameter="ope" 
+  	type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="index" path="/index.jsp"></forward>
+  	</action>
+  	
+  	<action path="/branch" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="plist" path="/projectlist.jsp"></forward>
+  		
+  		<forward name="main" path="/main/main.jsp" ></forward>
+  	</action>
+  	
+  	<action path="/pro" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="reflist" path="/main/reflist.jsp"></forward>
+  		<forward name="carlist" path="/main/carlist.jsp"></forward>
+  	</action>
+  	
+  	<action path="/area" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  	</action>
+  	
+  	<action path="/hq" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="hqbranch" path="/hqbranch2.jsp"></forward>	
+  	</action>
+  	
+  	
+  	<action path="/alarmlogs" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="logslist" path="/branchUserLogs.jsp"></forward>
+  	</action>
+  	
+  	
+  	<!-- 配置数据方面的东西 -->
+  	<action path="/hiscar" parameter="ope" input="/hiscarlist.jsp" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="hcarlist" path="/hiscarlist.jsp"></forward>
+  		<forward name="hcarStart" path="/carstartup.jsp"></forward>	
+  		<forward name="hcarlist2" path="/hiscarlist2.jsp"></forward>		
+  		<forward name="hisMap" path="/carhisMap.jsp"></forward>
+  		<forward name="hisallMap" path="/carallhisMap.jsp"></forward>
+  		
+  		
+  		<forward name="carstartup" path="/car/carstartup2.jsp"></forward>
+  		<forward name="hiscar" path="/car/hiscarlist3.jsp"></forward>
+  		<forward name="carCurve" path="/car/hiscarcurve.jsp"></forward>
+  		<forward name="hismap2" path="/car/carhismap2.jsp"></forward>
+  		<forward name="hisallmap2" path="/car/carallhismap2.jsp"></forward>
+  		
+  	</action>
+  		
+  	<action path="/hiscaralarm" parameter="ope" input="/hiscaralarm.jsp" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="hiscaralarm" path="/car/hiscaralarm.jsp"></forward>
+  	</action>
+  		
+  		
+  	<action path="/realcar" parameter="ope" input="/realcarlist.jsp" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="reallist" path="/realcarlist.jsp"></forward>
+  		<forward name="realMap" path="/carrealMap.jsp"></forward>
+  		
+  		<forward name="reallist2" path="/car/realcarlist2.jsp"></forward>
+  		<forward name="realmap2" path="/car/carrealmap2.jsp"></forward>
+  		
+  		<forward name="realmap2_exe" path="/exeget/carrealmap2.jsp"></forward>
+  		<forward name="reallist2_exe" path="/exeget/realcarlist2.jsp"></forward>
+  	</action>
+  	
+  	<action path="/hisbox" parameter="ope" input="/hisboxlist.jsp" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="hisbox" path="/hisboxlist.jsp"></forward>
+  		<forward name="hboxStart" path="/boxstartup.jsp"></forward>
+  		<forward name="hisbox2" path="/hisboxlist2.jsp"></forward>
+  		<forward name="boxCurve" path="/ccdc-debug/hisbox2.html"></forward>
+  	</action>
+  	
+  	<action path="/realbox" parameter="ope" input="/realboxlist.jsp" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="realbox" path="/realboxlist.jsp"></forward>
+  	</action>
+  	
+  	<action path="/realref" parameter="ope" input="/realreflist.jsp" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="realref"   path="/realreflist.jsp"></forward>
+  		<forward name="realfloor" path="/projectimage.jsp"></forward>
+  		<forward name="customer"  path="/realrefcustomer.jsp"></forward>
+  		
+  		
+  		<forward name="realref2" path="/ref/realreflist2.jsp"></forward>
+  		<forward name="realrefsys" path="/ref/realrefsys.jsp"></forward>
+  				
+  		<forward name="realrefsysCus" path="/ref/realrefcustomersys.jsp"></forward>
+  		<forward name="realrefCus" path="/ref/realrefcustomer2.jsp"></forward>
+  		<forward name="realfloor2" path="/ref/realrefimage.jsp"></forward>
+  		
+  		<forward name="realrefsys_exe" path="/exeget/realrefsys.jsp"></forward>
+  		<forward name="realref2_exe" path="/exeget/realreflist2.jsp"></forward>
+  	</action>
+  	
+  	<action path="/hisref" parameter="ope"  input="/hisreflist.jsp" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="hisref" path="/hisreflist.jsp"></forward>
+  		<forward name="refCurve" path="/ref/hisrefcurve.jsp"></forward>
+  		<forward name="hisref2" path="/ref/hisreflist2.jsp"></forward>
+  	</action>
+  	
+  	<action path="/startup" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="car_startup" path="/carstartup.jsp"></forward>
+  		<forward name="box_startup" path="/boxstartup.jsp"></forward>
+  		
+  		<forward name="car_startup2" path="/car/carstartup2.jsp"></forward>
+  	</action>
+  	
+  	<action path="/realcool" parameter="ope" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="mulcool" path="/realcoolerdata.jsp"></forward>
+  		<forward name="singlecool" path="/realcoolersingledata.jsp"></forward>
+  		
+  		<forward name="realsys" path="/realcoolersys.jsp"></forward>
+  		<forward name="singlecool2" path="/realcoolersingledata2.jsp"></forward>
+  		<forward name="mulcool2" path="/realcoolerdata2.jsp"></forward>
+  	</action>
+  	
+  	<!-- 后台配置的代码 -->
+  	 <action path="/configUser" parameter="ope" input="configUser.jsp" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="listUser" path="/configUser.jsp"></forward>
+  		<forward name="addUser" path="/addUser.jsp"></forward>
+  		<forward name="upUser" path="/upUser.jsp"></forward>
+  		<forward name="listAdmin" path="/adminUser.jsp"></forward>
+  		
+  		<forward name="listUser2" path="/admin/configuserlist.jsp"></forward>
+  		<forward name="addUser2" path="/admin/addUser2.jsp"></forward>
+  		<forward name="upUser2" path="/admin/upUser2.jsp"></forward>
+  	</action>
+  	
+  	 <action path="/configHqUser" parameter="ope" input="configHqUser.jsp" type="org.springframework.web.struts.DelegatingActionProxy">
+  		<forward name="listHqUser" path="/configHqUser.jsp"></forward>
+  		<forward name="addHqUser" path="/addHqUser.jsp"></forward>
+  		<forward name="upHqUser" path="/upHqUser.jsp"></forward>
+  		
+  		<forward name="listHqUser2" path="/admin/confighquserlist.jsp"></forward>
+  		<forward name="addHqUser2" 	path="/admin/addHqUser2.jsp"></forward>
+  		<forward name="upHqUser2" 	path="/admin/upHqUser2.jsp"></forward>
+  	 </action>
+  	 
+  	 
+  	 <!-- 车载参数配置 -->
+  	 <action path="/carparam" parameter="ope"  input="carparam.jsp"
+  	 type="org.springframework.web.struts.DelegatingActionProxy">
+  	 	<forward name="toparam" path="/carparam.jsp"></forward>
+  	 </action>
+  	
+  	<!-- 用户注册 -->
+  	<action path="/userRegister" parameter="ope"  type="org.springframework.web.struts.DelegatingActionProxy">
+  	 	<forward name="userregister" path="/userRegister.jsp"></forward>
+  	 	<forward name="registerSucceed" path="/uRegisterSucceed.jsp"></forward>
+ 	</action>
+  	
+  	
+  </action-mappings>
+  
+  
+  
+  
+  <!-- 资源文件映射 -->
+  <message-resources parameter="org.tbcc.struts.ApplicationResources,org.tbcc.struts.ApplicationResources_zh" />
+  
+</struts-config>
+

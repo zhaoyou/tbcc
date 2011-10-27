@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccDataRoles" table="TbccDataRoles" schema="dbo" >
+            
+            <id name="roleId" type="java.lang.Integer">
+                <column name="roleID"  />
+                <generator class="native"></generator>
+            </id>
+ 
+        <property name="roleName" type="java.lang.String">
+            <column name="roleName" length="50" not-null="true" />
+        </property>
+        
+        <property name="branchId" type="java.lang.Long">
+        	<column name="branchId"></column>
+        </property>
+        
+        
+        
+    </class>
+    
+</hibernate-mapping>

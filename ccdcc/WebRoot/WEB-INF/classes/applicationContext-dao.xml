@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		     xmlns:aop="http://www.springframework.org/schema/aop"
+	        xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	
+	<!-- 这个配置文件主要是配置与数据访问层相关的代码 -->
+	
+	<!-- 配置一个sessionfactory容器 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+	
+	<!-- 配置一个事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	<!-- 配置所有的数据访问类 -->
+	
+		<!-- 常用的系统类对象配置 -->
+		<bean id="userDao" class="org.tbcc.dao.impl.UserDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="branchDao" class="org.tbcc.dao.impl.BranchDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="clientDao" class="org.tbcc.dao.impl.ClientDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="crmDao" class="org.tbcc.dao.impl.CrmDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="hqDao" class="org.tbcc.dao.impl.HqDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="branchUserAlarmLogsDao" class="org.tbcc.dao.impl.BranchUserAlarmLogsDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="userRegisterDao" class="org.tbcc.dao.impl.UserRegisterDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<!-- 与项目相关的配置 -->
+		<bean id="projectDao" class="org.tbcc.dao.impl.ProjectDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="aiinfoDao" class="org.tbcc.dao.impl.AiInfoDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="refInfoDao" class="org.tbcc.dao.impl.RefInfoDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="devTypeDao" class="org.tbcc.dao.impl.DevTypeDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		
+		<!-- 与数据相关的配置    -->
+		<bean id="hiscarDao" class="org.tbcc.dao.impl.HisCarDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="hiscaralarmDao" class="org.tbcc.dao.impl.HisCarAlarmDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="realcarDao" class="org.tbcc.dao.impl.RealCarDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="hisboxDao" class="org.tbcc.dao.impl.HisBoxDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="realboxDao" class="org.tbcc.dao.impl.RealBoxDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="realrefDao" class="org.tbcc.dao.impl.RealRefDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="hisrefDao" class="org.tbcc.dao.impl.HisRefDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property> 
+		</bean>
+		
+		<bean id="startUpDao" class="org.tbcc.dao.impl.HisStartUpDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		
+		
+		
+		
+		<!-- 与制冷相关的数据访问类 -->
+		<bean id="ccapDevDao" class="org.tbcc.dao.impl.CcapDevDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		
+		<bean id="compressorSetdao" class="org.tbcc.dao.impl.CompressorSetDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="compressordao" class="org.tbcc.dao.impl.CompressorDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="condenserdao" class="org.tbcc.dao.impl.CondenserDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="aircoolerdao" class="org.tbcc.dao.impl.AirCoolerDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="realmulCompressordao" class="org.tbcc.dao.impl.RealMulCompressorDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="realsingleCompressordao" class="org.tbcc.dao.impl.RealSingleCompressorDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="coolerSystemDao" class="org.tbcc.dao.impl.CoolerSystemDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		
+		<!-- 项目图层的数据访问类 -->
+		
+		<bean id="getNetIdRealDataDaoImpl" class="org.tbcc.dao.impl.GetNetIdRealDataDaoImpl">
+			<property name="sessionFactory">
+				<ref bean="sessionFactory"/>
+			</property>
+		</bean>
+		<bean id="imgDaoImpl" class="org.tbcc.dao.impl.ImgDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory">
+			</property>
+		</bean>
+		
+		<bean id="imageControlDaoImpl" class="org.tbcc.dao.impl.ImageControlDaoImpl">
+			<property name="getNetIdRealDataDaoImpl">
+				<ref bean="getNetIdRealDataDaoImpl"/>
+			</property>
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<!-- 增加车载参数配置的数据访问类 -->
+		<bean id="paramActionDao" class="org.tbcc.dao.impl.ParamActionDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="paramVehicleCarDao" class="org.tbcc.dao.impl.ParamCarVehicleDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		
+		
+	
+</beans>

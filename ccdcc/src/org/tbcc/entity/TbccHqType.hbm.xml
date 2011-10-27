@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccHqType" table="TbccHqType" schema="dbo" >
+
+            
+            <id name="hqId" type="java.lang.Long">
+                <column name="HqID"/>
+                 <generator class="native"></generator>
+            </id>
+
+        <property name="hqName" type="java.lang.String">
+            <column name="HqName" length="50" not-null="true" />
+        </property>
+        <property name="hqCode" type="java.lang.String">
+            <column name="HqCode" length="50" not-null="true" />
+        </property>
+        <property name="hqNote" type="java.lang.String">
+            <column name="HqNote" length="200" />
+        </property>
+        
+        <property name="hqParentId" type="java.lang.Long" column="HqParentId"></property>
+        
+        <!-- 配置总部与分支的关系 -->
+        <set name="branchTypes" table="TbccHqBranchRelation" inverse="true">
+        	<key column="HqID"></key>
+        	<many-to-many class="org.tbcc.entity.TbccBranchType" column="BranchID"></many-to-many>
+        </set>
+        
+        
+        <property name="hqDisplayName" type="java.lang.String" column="hqDisplayName"></property>
+        <property name="hqLogo" type="java.sql.Blob" column="hqLogo"></property>
+        <property name="hqLogoEnable" type="java.lang.Integer" column="hqLogoEnable"></property>
+        
+        
+        
+    </class>
+</hibernate-mapping>

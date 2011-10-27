@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		     xmlns:aop="http://www.springframework.org/schema/aop"
+	        xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+           
+           	<!-- 这个配置文件主要是配置与业务逻辑层相关的代码 -->
+           
+           <!-- 配置一个事务切面 -->
+           <tx:advice id="transAdvice" transaction-manager="transactionManager">
+           		<tx:attributes>
+           			<tx:method name="get*" read-only="true"/>
+           			<tx:method name="search*" read-only="true"/>
+           			<tx:method name="insert*" read-only="false"/>
+           			<tx:method name="*" read-only="false"/>
+           		</tx:attributes>
+           </tx:advice>
+           
+           <!-- 把一个切面切入业务逻辑 -->
+           <aop:config>
+           	<aop:pointcut id="bizPoint" expression="execution( * org.tbcc.biz.*.* (..))"/>
+           	<aop:advisor advice-ref="transAdvice" pointcut-ref="bizPoint"/>
+           </aop:config>
+           
+           <!-- 与一些用户基本相关的配置 -->
+           <bean id="userBiz" class="org.tbcc.biz.impl.UserBizImpl">
+           	<property name="userdao" ref="userDao"></property>
+           </bean>
+           
+           <bean id="branchBiz" class="org.tbcc.biz.impl.BranchBizImpl">
+           	<property name="branchDao" ref="branchDao"></property>
+           </bean>
+           
+           <bean id="clientBiz" class="org.tbcc.biz.impl.ClientBizImpl">
+           		<property name="clientDao" ref="clientDao"></property>
+           </bean>
+           
+           <bean id="crmBiz" class="org.tbcc.biz.impl.CrmBizImpl">
+           	<property name="crmDao" ref="crmDao"></property>
+           </bean>
+           
+           <bean id="hqBiz" class="org.tbcc.biz.impl.HqBizImpl">
+           	<property name="hqDao" ref="hqDao"></property>
+           </bean>
+           
+           <bean id="branchUserAlarmLogsBiz" class="org.tbcc.biz.impl.BranchUserAlarmBizImpl">
+           	<property name="branchUserAlarmLogsDao" ref="branchUserAlarmLogsDao"></property>
+           	<property name="branchDao" ref="branchDao"></property>
+           	<property name="realRefDao" ref="realrefDao"></property>
+           </bean>
+           
+           <bean id="userRegisterBiz" class="org.tbcc.biz.impl.UserRegisterBizImpl">
+           		<property name="userregisterdao" ref="userRegisterDao"></property>
+           </bean>
+           
+           
+           <!-- 项目的一些配置 -->
+           <bean id="projectBiz" class="org.tbcc.biz.impl.ProjectBizImpl">
+           	<property name="proDao" ref="projectDao"></property>
+           </bean>
+           
+           <bean id="aiInfoBiz" class="org.tbcc.biz.impl.AiInfoBizImpl">
+           	<property name="aiinfoDao" ref="aiinfoDao"></property>
+           </bean>
+           
+           <bean id="refInfoBiz" class="org.tbcc.biz.impl.RefInfoBizImpl">
+           	<property name="refinfoDao" ref="refInfoDao"></property>
+           </bean>
+           
+           <bean id="devTypeBiz" class="org.tbcc.biz.impl.DevTypeBizImpl">
+           	<property name="devTypeDao" ref="devTypeDao"></property>
+           </bean>
+           
+           
+           
+           <!-- 涉及的数据的一些配置 -->
+           <bean id="hiscarBiz" class="org.tbcc.biz.impl.HisCarBizImpl">
+           	<property name="hiscarDao" ref="hiscarDao"></property>
+        	<property name="objToHis" ref="objtohis"></property>
+        	<property name="branchDao" ref="branchDao"></property>
+        	<property name="calc" ref="calc"></property>
+        	<property name="projectBiz" ref="projectBiz"></property>
+           </bean>
+           
+           <bean id="hiscaralarmbiz" class="org.tbcc.biz.impl.HisCarAlarmBizImpl">
+           	<property name="hiscaralarmdao" ref="hiscaralarmDao"></property>
+           </bean>
+           
+           <bean id="realcarBiz" class="org.tbcc.biz.impl.RealCarBizImpl">
+           	<property name="realCarDao" ref="realcarDao"></property>
+           	<property name="branchDao" ref="branchDao"></property>
+           	<property name="projectBiz" ref="projectBiz"></property>
+           </bean>
+           
+           
+            <bean id="hisboxBiz" class="org.tbcc.biz.impl.HisBoxBizImpl">
+           	<property name="branchDao" ref="branchDao"></property>
+           	<property name="calc" ref="calc"></property>
+           	<property name="objtoHis" ref="objtohis"></property>
+           	<property name="hisboxDao" ref="hisboxDao"></property>
+            </bean>
+           
+           
+           <bean id="realboxBiz" class="org.tbcc.biz.impl.RealBoxBizImpl">
+           	<property name="realboxDao" ref="realboxDao"></property>
+           	<property name="branchDao" ref="branchDao"></property>
+           </bean>
+           
+           <bean id="realrefBiz" class="org.tbcc.biz.impl.RealRefBizImpl">
+           	<property name="branchDao" ref="branchDao"></property>
+           	<property name="realRefDao" ref="realrefDao"></property>
+           </bean>
+           
+           <bean id="hisrefBiz" class="org.tbcc.biz.impl.HisRefBizImpl">
+           	<property name="hisRefDao" ref="hisrefDao"></property>
+           	<property name="aiinfoBiz" ref="aiInfoBiz"></property>
+           	<property name="branchBiz" ref="branchBiz"></property>
+           	<property name="refinfoBiz" ref="refInfoBiz"></property>
+           	<property name="objToHis" ref="objtohis"></property>
+           	<property name="calc" ref="calc"></property>
+           	<property name="devTypeBiz" ref="devTypeBiz"></property>
+           </bean>
+           
+           
+           <bean id="startUpBiz" class="org.tbcc.biz.impl.HisStartUpBizImpl">
+           	<property name="objToHis" ref="objtohis"></property>
+           	<property name="startupDao" ref="startUpDao"></property>
+           </bean>
+           
+           <!-- 制冷相关的数据 -->
+           <bean id="aircoolerBiz" class="org.tbcc.biz.impl.AirCoolerBizImpl">
+           	<property name="compressorsetdao" ref="compressorSetdao"></property>
+           	<property name="aircoolerdao" ref="aircoolerdao"></property>
+           </bean>
+           
+           <bean id="ccapdevBiz" class="org.tbcc.biz.impl.CCapDevBizImpl">
+           		<property name="ccapDevDao" ref="ccapDevDao"></property>
+           </bean>
+           
+           <bean id="compressBiz" class="org.tbcc.biz.impl.CompressorBizImpl">
+           		<property name="compressorSetdao" ref="compressorSetdao"></property>
+           		<property name="compressordao" ref="compressordao"></property>
+           </bean>
+           
+           <bean id="compressSetBiz" class="org.tbcc.biz.impl.CompressorSetBizImpl">
+           	<property name="ccapDevBiz" ref="ccapdevBiz"></property>
+           	<property name="compressorSetDao" ref="compressorSetdao"></property>
+           	<property name="realmulcompressordao" ref="realmulCompressordao"></property>
+           	<property name="realsinglecompressordao" ref="realsingleCompressordao"></property>
+           	<property name="projectdao" ref="projectDao"></property>
+           </bean>
+           
+           <bean id="condenserBiz" class="org.tbcc.biz.impl.CondenserBizImpl">
+           	<property name="compressorsetDao" ref="compressorSetdao"></property>
+           	<property name="condenserDao" ref="condenserdao"></property>
+           </bean>
+           
+           <bean id="CoolerSystemBiz" class="org.tbcc.biz.impl.CoolerSystemBizImpl">
+           		<property name="coolerSystemDao" ref="coolerSystemDao"></property>
+           </bean>
+           
+           
+           <!-- 这个类配置的是把对象属性，转化成实体属性 -->        
+          <bean id="objtohis" class="org.tbcc.util.ObjectToHistory"></bean>
+          <!-- 这个类用来统计数的最大值、最小值、平均值的 -->
+          <bean id="calc" class="org.tbcc.util.Calc"></bean>
+          
+          <!-- 项目图层的业务实现类 -->
+          
+          <bean id="getImageEachControlAllDatasImpl" class="org.tbcc.biz.impl.GetImageEachControlAllDatasImpl">
+			<property name="imgDaoImpl">
+				<ref bean="imgDaoImpl"/>
+			</property>
+		
+		</bean>
+		
+		
+		<!-- 增加车载参数配置 -->
+		
+         <bean id="paramActionBiz" class="org.tbcc.biz.impl.ParamActionBizImpl">
+         	<property name="paramActionDao" ref="paramActionDao"></property>
+         </bean> 
+         
+         <bean id="paramCarVehicleBiz" class="org.tbcc.biz.impl.ParamCarVehicleBizImpl">
+         	<property name="paramCarVehicleDao" ref="paramVehicleCarDao"></property>
+         	<property name="paramActionBiz" ref="paramActionBiz"></property>
+         	<property name="logOperate" ref="logOperate"></property>
+         </bean>
+           
+         <bean id="logOperate" class="org.tbcc.log.LogOperateService">
+         	<property name="sessionfactory" ref="sessionFactory"></property>
+         </bean>
+        
+           
+</beans>

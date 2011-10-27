@@ -1,0 +1,127 @@
+body {
+	background: #FFFFFF;
+}
+
+table {
+	font-family: ËÎÌå;
+	font-size: 10pt;
+}
+.Desktop_left_bar_bg {
+	background-image: url(../img/desktop_bar_bg.gif);
+}
+.Desktop_right_bar_bg{
+	background-image: url(../img/desktop_bar_bg.gif);
+}
+
+.Desktop_left_underline {
+	background-image: url(../img/desktop_bar_underline.gif);
+	height: 1px;
+}
+
+.table {
+	border-top: solid 1px #4986D4;
+	border-left: solid 1px #4986D4;
+	border-right: solid 1px #4986D4;
+	border-bottom: solid 1px #4986D4;
+	background: #FFFFFF;
+}
+
+.table_notop {
+	border-top: solid 1px #4986D4;
+	border-left: solid 1px #4986D4;
+	border-right: solid 1px #4986D4;
+	border-bottom: solid 1px #4986D4;
+	background: #FFFFFF;
+}
+
+.Desktop_title {
+	filter:dropshadow(color=#FFFFFF,offX=1,offY=1,Positive=1);
+	font-size: 10pt;
+	font-weight: bold;
+	color: #0A66A0;
+	height:1;
+}
+
+
+.Desktop_left_td {
+}
+
+.Desktop_left_Gray_font {
+	background-color: #E9E9E9;
+}
+
+.Desktop_votting_title_font {
+	font-size: 10pt;
+	font-weight: bold;
+	color: #D91400;
+}
+
+.Desktop_votting_button {
+	border: 0px;
+	width: 63px;
+	height: 20px;
+	font-size: 9pt;
+	PADDING-TOP:2px;
+}
+
+.Desktop_votting_bg{
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffffff,endColorStr=#C6D8F7);
+	background-color: #FFEED4;
+}
+
+
+.Desktop_votting_btn_bg {
+	background-color: #C1D3F7;
+}
+
+.Desktop_Right_insidetable {
+	border-top: solid 5px #DBEDFF;
+	border-left: solid 2px #DBEDFF;
+	border-right: solid 2px #DBEDFF;
+	border-bottom: solid 7px #DBEDFF;
+	background: #FEFDFC;
+}
+
+.Desktop_Right_td {
+	border-bottom: solid 1px #DBEDFF;
+}
+
+.Desktop_Right_bg {
+	background-color: #DDE7FA;
+}
+
+.Adage_Style {
+	font-family: ºÚÌå;
+	font-size: 12pt;
+	color: #154899;
+}
+
+.Text_area_style {
+	BORDER: 0px; 
+	width: 100%;
+	HEIGHT: 100%; 
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffffff,endColorStr=#C6D8F7);
+	background-color: #C6D8F7;
+}
+
+.Desktop_Submit_button {
+	background-color: #FFEED4;
+}
+
+#sub {
+	margin-top: 3px;
+	margin-left: 3px;
+	float: left;
+	width: 68%;
+	height:100%;
+}
+
+#right {
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 3px;
+	float: right;
+	width: 30%;
+	height:100%;
+}
+

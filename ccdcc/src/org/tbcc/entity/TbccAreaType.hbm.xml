@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccAreaType" table="TbccAreaType" schema="dbo" >
+     
+         <id name="areaId" type="java.lang.String">
+                <column name="AreaID" length="50" />
+                <generator class="native"></generator>
+         </id>
+   
+        <property name="areaName" type="java.lang.String">
+            <column name="AreaName" length="50" not-null="true" />
+        </property>
+        
+        <set name="branchTypes" table="TbccAreaBranchRelation" inverse="true">
+        	<key column="AreaID"></key>
+        	<many-to-many column="BranchID" class="org.tbcc.entity.TbccBranchType"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+  	administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.config.TbccParaVehicleAlarm" table="TbccParaVehicleAlarm" schema="dbo" >
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+       
+       	<property name="parentId" type="java.lang.Long" column="parentId"></property>
+       
+       	<property name="halarm_high" type="java.lang.Double" column="HAlarm_HighLimit"></property>
+       	<property name="halarm_highDelay" type="java.lang.Short" column="HAlarm_HighDelay"></property>
+       	<property name="halarm_highDelayValid" type="java.lang.Byte" column="HAlarm_HighDelay_Valid"></property>
+       	<property name="halarm_highValid" type="java.lang.Byte" column="HAlarm_HighLimit_Valid"></property>
+       	
+       	<property name="halarm_low" type="java.lang.Double" column="HAlarm_LowLimit"></property>
+       	<property name="halarm_lowDelay" type="java.lang.Short" column="HAlarm_LowDelay"></property>
+       	<property name="halarm_lowDelayValid" type="java.lang.Byte" column="HAlarm_LowDelay_Valid"></property>
+       	<property name="halarm_lowValid" type="java.lang.Byte" column="HAlarm_LowLimit_Valid"></property>
+       	
+       	<property name="talarm_high" type="java.lang.Double" column="TAlarm_HighLimit"></property>
+       	<property name="talarm_highDelay" type="java.lang.Short" column="TAlarm_HighDelay"></property>
+       	<property name="talarm_highDelayValid" type="java.lang.Byte" column="TAlarm_HighDelay_Valid"></property>
+       	<property name="talarm_highValid" type="java.lang.Byte" column="TAlarm_HighLimit_Valid"></property>
+       	
+       	<property name="talarm_low" type="java.lang.Double" column="TAlarm_LowLimit"></property>
+       	<property name="talarm_lowDelay" type="java.lang.Short" column="TAlarm_LowDelay"></property>
+       	<property name="talarm_lowDelayValid" type="java.lang.Byte" column="TAlarm_LowDelay_Valid"></property>
+       	<property name="talarm_lowValid" type="java.lang.Byte" column="TAlarm_LowLimit_Valid"></property>
+       	
+       	
+       	
+       	
+       	
+       	<property name="hprealarm_high" type="java.lang.Double" column="HPreAlarm_HighLimit"></property>
+       	<property name="hprealarm_highDelay" type="java.lang.Short" column="HPreAlarm_HighDelay"></property>
+       	<property name="hprealarm_highDelayValid" type="java.lang.Byte" column="HPreAlarm_HighDelay_Valid"></property>
+       	<property name="hprealarm_highValid" type="java.lang.Byte" column="HPreAlarm_HighLimit_Valid"></property>
+       	
+       	<property name="hprealarm_low" type="java.lang.Double" column="HPreAlarm_LowLimit"></property>
+       	<property name="hprealarm_lowDelay" type="java.lang.Short" column="HPreAlarm_LowDelay"></property>
+       	<property name="hprealarm_lowDelayValid" type="java.lang.Byte" column="HPreAlarm_LowDelay_Valid"></property>
+       	<property name="hprealarm_lowValid" type="java.lang.Byte" column="HPreAlarm_LowLimit_Valid"></property>
+       	
+       	<property name="tprealarm_high" type="java.lang.Double" column="TPreAlarm_HighLimit"></property>
+       	<property name="tprealarm_highDelay" type="java.lang.Short" column="TPreAlarm_HighDelay"></property>
+       	<property name="tprealarm_highDelayValid" type="java.lang.Byte" column="TPreAlarm_HighDelay_Valid"></property>
+       	<property name="tprealarm_highValid" type="java.lang.Byte" column="TPreAlarm_HighLimit_Valid"></property>
+       	
+       	<property name="tprealarm_low" type="java.lang.Double" column="TPreAlarm_LowLimit"></property>
+       	<property name="tprealarm_lowDelay" type="java.lang.Short" column="TPreAlarm_LowDelay"></property>
+       	<property name="tprealarm_lowDelayValid" type="java.lang.Byte" column="TPreAlarm_LowDelay_Valid"></property>
+       	<property name="tprealarm_lowValid" type="java.lang.Byte" column="TPreAlarm_LowLimit_Valid"></property>
+       	
+       
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="org.tbcc.entity">
+	<class name="TbccCrm" table="TbccCrm"  schema="dbo">
+	
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="hid" ></property>
+		<property name="cid"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+* {
+ margin:0;
+ padding:0
+}
+html, body {
+ height: 100%;
+ width: 100%;
+ font-size:12px
+}
+.white_content {
+ display: block;
+ position: absolute;
+ top: 24%;
+ left: 20%;
+ width: 55%;
+ padding: 6px 16px;
+ border: 12px solid #D6E9F1;
+ background-color: white;
+ z-index:1002;
+ overflow: auto;
+}
+
+
+.con {
+ text-indent:1.5pc;
+ line-height:21px
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccUserRegister" table="TbccUserRegister" schema="dbo" >
+
+        <id name="id" type="java.lang.Long">
+                <column name="Id" />
+                <generator class="native"></generator>
+        </id>
+        <property name="rname" type="java.lang.String">
+            <column name="rname" length="50" not-null="true" />
+        </property>
+        
+        <property name="sex" type="java.lang.Integer">
+            <column name="sex" not-null="true" />
+        </property>
+        
+        <property name="position" type="java.lang.String">
+            <column name="position" length="50" not-null="true" />
+        </property>
+        
+        <property name="profession" type="java.lang.String">
+            <column name="profession" length="50" not-null="true" />
+        </property>
+        
+        <property name="companyname" type="java.lang.String">
+            <column name="companyname" length="50" not-null="true" />
+        </property>
+        
+        <property name="companyAddress" type="java.lang.String">
+            <column name="companyaddress" length="50" not-null="true" />
+        </property>
+        
+        <property name="email" type="java.lang.String">
+            <column name="email" length="30" not-null="true" />
+        </property>
+        
+        <property name="phone" type="java.lang.String">
+            <column name="phone" length="15" not-null="true" />
+        </property>
+        
+        <property name="fax" type="java.lang.String">
+            <column name="fax" length="15" not-null="true" />
+        </property>
+        
+        <property name="mobilephone" type="java.lang.String">
+            <column name="mobilephone" length="15" not-null="true" />
+        </property>
+        
+        <property name="isdeal" type="java.lang.Integer">
+            <column name="isdeal" not-null="true"/>
+        </property>
+        
+        <property name="remark" type="java.lang.String">
+            <column name="remark" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

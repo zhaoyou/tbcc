@@ -1,0 +1,21 @@
+#Wed Oct 05 18:06:30 CST 2011
+eclipse.preferences.version=1
+encoding//WebRoot/css/chezai/tc.css=UTF-8
+encoding//WebRoot/css/desktop.css=gbk
+encoding//WebRoot/css/head/head.css=gbk
+encoding//WebRoot/css/login.css=gbk
+encoding//WebRoot/css/login/login.css=gbk
+encoding//WebRoot/css/mainWin.css=gbk
+encoding//WebRoot/css/page/carparam.css=gbk
+encoding//WebRoot/css/style.css=gbk
+encoding//WebRoot/script/Exce.js=gbk
+encoding//WebRoot/script/bExcel3.js=gbk
+encoding//WebRoot/script/cExcel.js=gbk
+encoding//WebRoot/script/carparam.js=gbk
+encoding//WebRoot/script/carstransport.js=gbk
+encoding//WebRoot/script/common.js=gbk
+encoding//WebRoot/script/dtree/dtree.js=gbk
+encoding//WebRoot/script/queryTime.js=gbk
+encoding//WebRoot/script/rExcel.js=gbk
+encoding//WebRoot/script/titleTime.js=gbk
+encoding//src/org/tbcc/biz/impl/GetImageEachControlAllDatasImpl.java=UTF-8

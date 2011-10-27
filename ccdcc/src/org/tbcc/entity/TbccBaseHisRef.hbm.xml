@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="org.tbcc.entity">
+
+	<class name="TbccBaseHisRef" table="tbcchisref" mutable="false">
+	
+		<id name="id" type="java.lang.Integer" column="ID">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="updateTime" type="java.util.Date" column="UpdateTime"></property>
+		
+		<property name="hdate" type="java.util.Date" column="hDate"></property>
+		
+		<property name="ai1" type="java.lang.Double" column="AI1"></property>
+		<property name="ai2" type="java.lang.Double" column="AI2"></property>
+		<property name="ai3" type="java.lang.Double" column="AI3"></property>
+		<property name="ai4" type="java.lang.Double" column="AI4"></property>
+		<property name="ai5" type="java.lang.Double" column="AI5"></property>
+		<property name="ai6" type="java.lang.Double" column="AI6"></property>
+		<property name="ai7" type="java.lang.Double" column="AI7"></property>
+		<property name="ai8" type="java.lang.Double" column="AI8"></property>
+		<property name="ai9" type="java.lang.Double" column="AI9"></property>
+		<property name="ai10" type="java.lang.Double" column="AI10"></property>
+		<property name="ai11" type="java.lang.Double" column="AI11"></property>
+		<property name="ai12" type="java.lang.Double" column="AI12"></property>
+		
+		<property name="alarmStatus_ref1" type="java.lang.Integer" column="Ref1_RefAlarmState"></property>
+		<property name="alarmStatus_ref2" type="java.lang.Integer" column="Ref2_RefAlarmState"></property>
+		<property name="alarmStatus_ref3" type="java.lang.Integer" column="Ref3_RefAlarmState"></property>
+		<property name="alarmStatus_ref4" type="java.lang.Integer" column="Ref4_RefAlarmState"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="org.tbcc.entity">
+		<class name="TbccBaseHisCarAlarm" mutable="false" table="TbccHistCarAlarm" >
+			<id name="id" type="java.lang.Long" column="id">
+				<generator class="native"></generator>
+			 </id>
+			 
+			 <property name="parentId" type="java.lang.Long" column="parentId"></property>	 
+			 <property name="startTime" type="java.util.Date" column="startTime"></property>
+			 <property name="endTime" type="java.util.Date" column="endTime"></property>
+			 <property name="projectId" type="java.lang.String" column="projectId"></property>
+			 <property name="events" type="java.lang.String" column="events"></property>
+			 
+			 <property name="cause" type="java.lang.String" column="cause"></property>
+			 <property name="measure" type="java.lang.String" column="measure"></property>
+			 <property name="dutier" type="java.lang.String" column="dutier"></property>
+			 <property name="remark" type="java.lang.String" column="remark"></property>
+			 
+			 <property name="tvalue" type="java.lang.Integer" column="tvalue"></property>
+		</class>
+</hibernate-mapping>

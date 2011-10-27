@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccDictory" table="TbccDictory" schema="dbo" >
+     
+            <id name="id" type="java.lang.Long">
+                <column name="Id" />
+                <generator class="native"></generator>
+            </id>
+            
+            
+            <property name="projectId" type="java.lang.String">
+                <column name="projectID" length="4" />
+            </property>
+            
+            <property name="key" type="java.lang.String">
+                <column name="Key" length="50" />
+            </property>
+
+        
+        <property name="value" type="java.lang.String">
+            <column name="Value" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

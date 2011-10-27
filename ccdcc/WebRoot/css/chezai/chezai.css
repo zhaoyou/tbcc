@@ -1,0 +1,329 @@
+*{
+margin:0;
+padding:0;}
+body{
+	width: 990px;
+	margin:0 auto;
+	font-family: "宋体";
+	font-size: 12px;
+}
+img,h1,div{
+	border:0;
+}
+ul{
+list-style-type:none;}
+img,h1{
+	border:0;
+}
+.clear {
+	clear:both;
+	
+}
+
+#header {
+	background-image: url(../../images/head/head.gif);
+	background-repeat: no-repeat;
+	height: 97px;
+	width: 990px;
+}
+#header .img_a {
+	padding-top: 69px;
+	padding-left: 800px;
+}
+#header .img_b {
+	padding-top: 69px;
+	margin-left: 16px;
+}
+#left {
+	float: left;
+	height: 500px;
+	width: 183px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #a7b7c7;
+	background-image: url(../../images/chezai/jib.gif);
+	background-repeat: repeat-y;
+	background-position: 0px 0px;
+	padding-left: 2px;
+}
+#line {
+	width: 8px;
+	background-color: #c8e8ff;
+	height: 500px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #eaffff;
+	border-right-color: #eaffff;
+	border-left-color: #eaffff;
+	float: left;
+	position: relative;
+}
+#line img {
+	position: absolute;
+	top: 249px;
+	margin-right: 1px;
+	left: 0px;
+}
+#left #line_a {
+	background-image: url(../../images/chezai/menu.gif);
+	height: 8px;
+	width: 180px;
+	background-repeat: no-repeat;
+	
+}
+
+/**	background-image: url(../../images/chezai/bg_v.gif);**/
+#right {
+	float: left;
+	height: 496px;
+	width: 788px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #acb4be;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #acb4be;
+	padding-top: 5px;
+	padding-left: 4px;
+
+	background-repeat: no-repeat;
+	background-position: 460px 320px;
+}
+#left #nav li{
+	display: block;
+	float: left;
+	width: 182px;
+}
+
+#nav{}
+#footer {
+	background-image: url(../../images/chezai/footer.gif);
+	background-repeat: repeat-x;
+	height: 33px;
+	width: 989px;
+	background-position: 0px 0px;
+	float: left;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #acb4be;
+	border-bottom-color: #acb4be;
+	border-left-color: #acb4be;
+	font-weight: normal;
+	text-align: center;
+	padding-top: 10px;
+	color: #1b4e83;
+	line-height: 16px;
+}
+#left .tab_a a {
+	background-image: url(../../images/chezai/a.gif);
+	height: 28px;
+	width: 182px;
+	display: block;
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	line-height: 28px;
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	list-style-position: outside;
+	list-style-image: url(../../images/chezai/icon_b.gif);
+	list-style-type: none;
+}
+#left #nav .tab_a img {
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin-top: 2px;
+	margin-left: 12px;
+	line-height: 20px;
+	float: left;
+	margin-right: 10px;
+}
+
+
+#left .tab_a a:hover{
+	background-image: url(../../images/chezai/aa.gif);
+	height: 28px;
+	width: 182px;
+	display: block;
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	line-height: 28px;
+	color: #CC0000;
+}
+#left #nav .tab_b a {
+	background-image: url(../../images/chezai/b.gif);
+	height: 33px;
+	background-repeat: repeat-x;
+	width: 182px;
+	line-height: 33px;
+	background-position: 0px 0px;
+	display: block;
+	text-decoration: none;
+	color: #265d87;
+	font-size: 14px;
+	font-weight: bold;
+}
+#left #nav .tab_b a:hover{
+	background-image: url(../../images/chezai/bb.gif);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	font-family: "宋体";
+	color: #CC0000;
+}
+#left #nav .tab_b img {
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin-top: 6px;
+	margin-left: 12px;
+	line-height: 20px;
+	float: left;
+	margin-right: 10px;
+}
+
+#left #nav .tab_c a {
+	background-image: url(../../images/chezai/c.gif);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	height: 29px;
+	width: 182px;
+	display: block;
+	text-indent: -999px;
+}
+
+#left #nav .tab_c a:hover{
+	background-image: url(../../images/chezai/cc.gif);
+	background-repeat: repeat-x;
+}
+
+#left #nav{
+	width: 183px;
+}
+#left #nav .tab {
+	background-image: url(../../images/chezai/menu_a.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	height: 8px;
+	width: 183px;
+	text-align: center;
+}
+
+#left #nav .tab_a {
+	float: left;
+	width: 181px;
+}
+#menu img {
+	display: inline-block;
+	padding-top: 8px;
+	padding-left: 8px;
+	height: 14px;
+	width: 14px;
+}
+#menu span {
+	padding-top: 0px;
+	padding-left: 25px;
+	margin-top: 0px;
+	display: inline-block;
+	padding-bottom: 2px;
+	color: #454343;
+}
+.datalist{
+	border:1px solid #ADCEE9;
+	border-collapse:collapse;
+	background-color:#FFFFFF;
+	font-size:12px;
+	font-weight: normal;
+}
+#header .img_a {
+	padding-top: 68px;
+	padding-left: 800px;
+}
+.datalist caption{
+	font-size: 12px;
+	height: 28px;
+	width: 150px;
+	text-align: left;
+}
+.datalist th{
+	border:1px solid #c6e4f8;
+	background-color:#4bacff;
+	font-weight:normal;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:12px;
+	padding-right:12px;
+	text-align:center;
+	background-image: url(../../images/chezai/bg_cc.gif);
+	background-repeat: repeat-x;
+	font-size: 12px;
+	background-position: 0px 0px;
+}
+.datalist{
+	border:1px solid #c6e2f7;
+	font-family:Arial;
+	border-collapse:collapse;
+	background-color:#FFFFFF;
+	font-size:12px;
+}
+
+.datalist td{
+	text-align:center;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:10px;
+	padding-right:10px;
+	border: 1px solid #c6e4f8;
+}
+.datalist tr.altrow{
+	background-color:#F0F9FF;
+	text-align: left;
+}
+
+.datalist tr.altrows{
+	background-image: url(../../images/chezai/button_d.gif);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	line-height: 22px;
+	text-align: left;
+}
+#right .datalist span {
+	line-height: 12px;
+	font-weight: normal;
+	color: #3a6486;
+	display: block;
+	float: left;
+	padding-top: 4px;
+	padding-left: 8px;
+}
+#right .datalist .pic {
+	display: block;
+	float: left;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-left: 0px;
+}
+
+#right .datalist1 .altrowu {
+	background-image: url(../../images/chezai/button_d.gif);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+}
+#right .datalist .altrows div {
+	float: left;
+	margin-right: 10px;
+}
+#right .datalist .altrows img {
+	float: left;
+}

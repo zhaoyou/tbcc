@@ -1,0 +1,148 @@
+fieldset#login {
+	padding: 5px;
+	width: 578px;
+	height: 360px;
+	font-size: 12px;
+	border: none;
+	position: relative;
+	left: 15px;
+	background-image: url(../../images/admin/login_bg1.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	color: #666;
+	background-position: 0px 0px;
+}
+#login h4 {
+	font-size: 12px;
+	width: 360px;
+	height: 22px;
+	margin: 0px;
+	text-align: left;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 50px;
+	font-weight: bold;
+	color: #3A6486;
+	display: block;
+}
+#login p {
+	width: 276px;
+	margin: 0px;
+	padding: 0px;
+	font-family: "宋体";
+}
+
+#right #bottom #login table tr td label {
+	float: left;
+	font-size: 12px;
+	display: block;
+	height: 22px;
+	width: 105px;
+	line-height: 22px;
+	text-align: left;
+	color: #3a6486;
+}
+
+
+
+
+#login #remember {
+	float: left;
+	width: 14px;
+	height: 14px;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	top: 3px;
+}
+#right #bottom #login table {
+	height: 60px;
+	width:350px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	text-align: center;
+}
+
+
+#login #username, #login #password {
+	border: 1px solid #9fbbcd;
+	width: 160px;
+	height: 20px;
+	color: #222222;
+	font-size: 12px;
+	float: left;
+	margin-bottom: 5px;
+	background-color: #FFF;
+	line-height: 18px;
+	display: block;
+	margin-top: 4px;
+	margin-right: 2px;
+	margin-left: 2px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#right #bottom #login table tr td #select {
+	border: 1px solid #7F9DB9;
+	width: 154px;
+	height: 20px;
+	color: #222222;
+	font-size: 12px;
+	float: left;
+	margin-bottom: 5px;
+	background-color: #FFF;
+	line-height: 18px;
+	display: block;
+	margin-top: 4px;
+	margin-right: 2px;
+	margin-left: 8px;
+	padding: 0px;
+}
+
+
+.clear {
+clear:both;
+}
+#right #bottom #login table tr td span {
+	float: left;
+}
+
+
+
+#right #bottom #login table tr td div .input_cc {
+	background-image: url(../../images/admin/an0056.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 19px;
+	width: 45px;
+	border:0;
+	cursor:pointer;
+	text-indent: -9999px;
+	float: left;
+	margin-right: 40px;
+	margin-left: 10px;
+}
+
+
+
+#right #bottom #login table tr td div .input_aa {background-image: url(../../images/admin/an0057.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 19px;
+	width: 45px;
+	border:0;
+	cursor:pointer;
+	text-indent: -9999px;
+	float: left;
+}

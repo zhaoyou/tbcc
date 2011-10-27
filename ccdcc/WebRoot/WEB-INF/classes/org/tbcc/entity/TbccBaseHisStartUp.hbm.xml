@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="org.tbcc.entity">
+	<class name="TbccBaseHisStartUp" table="tbcchisstartup" mutable="false">
+		<id column="Id" name="id" type="java.lang.Long">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="beginTime" type="java.util.Date" column="BeginTime"></property>
+		<property name="endTime" type="java.util.Date" column="EndTime"></property>
+		<property name="pageIndex" type="java.lang.Integer" column="PageIndex"></property>
+		<property name="pageCount" type="java.lang.Integer" column="PageCount"></property>
+		
+		<property name="recordInterval" type="java.lang.Integer" column="RecordInterval"></property>
+		<property name="lastPageIndex" type="java.lang.Integer" column="LastPageIndex"></property>
+		<property name="lastPageRecNum" type="java.lang.Integer" column="lastPageRecNum"></property>
+		<property name="beginAddress" type="java.lang.String" column="BeginAddress"></property>
+		
+		<property name="endAddress" type="java.lang.String" column="EndAddress"></property>
+		<property name="shipper" type="java.lang.String" column="Shipper"></property>
+		<property name="carrier" type="java.lang.String" column="Carrier"></property>
+		<property name="receiver" type="java.lang.String" column="Receiver"></property>
+		
+		<property name="lastRecordTime" type="java.util.Date" column="LastRecordTime"></property>
+		<property name="updateStatus" type="java.lang.Integer" column="UpdateStatus"></property>
+		
+		<property name="tdwlimit" type="java.lang.Integer" column="tdwlimit"></property>
+		<property name="tuplimit" type="java.lang.Integer" column="tuplimit"></property>
+	
+	</class>
+</hibernate-mapping>

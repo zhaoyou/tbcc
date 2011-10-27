@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccPrjType" table="TbccPrjType" schema="dbo" >
+
+            
+            
+            <id name="projectId" type="java.lang.String">
+                <column name="projectID" length="4" />
+            	<generator class="native"></generator>
+            </id>
+
+        
+        <property name="projectType" type="java.lang.Integer">
+            <column name="ProjectType" not-null="true" />
+        </property>
+        <property name="projectName" type="java.lang.String">
+            <column name="ProjectName" length="50" not-null="true" />
+        </property>
+        <property name="projectCode" type="java.lang.String">
+            <column name="ProjectCode" length="50" not-null="true" />
+        </property>
+        <property name="projectRelInfo" type="java.lang.String">
+            <column name="ProjectRelInfo" length="500" />
+        </property>
+        <property name="projectNote" type="java.lang.String">
+            <column name="ProjectNote" length="500" />
+        </property>
+        
+        
+        
+        <!-- 配置关联关系 -->
+        <set name="branchTypes" table="TbccBranchPrjRelation"  fetch="select" >
+        	<key column="ProjectID"></key>
+        	<many-to-many class="org.tbcc.entity.TbccBranchType" column="BranchID"></many-to-many>
+        </set>
+        
+        <property name="projectAuthCode" type="java.lang.String" column="projectAuthCode"></property>
+        
+    </class>
+</hibernate-mapping>

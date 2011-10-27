@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="org.tbcc.entity.TbccBaseRealCar" table="tbcccarrealview"  schema="dbo" mutable="false">
+		<id name="projectId" type="java.lang.String" column="ProjectID">
+			<generator class="assigned"></generator>
+		</id>
+		
+		<property name="projectName" type="java.lang.String" column="projectName"></property>
+		<property name="id" type="java.lang.Long" column="id"></property>
+		<property name="netId" type="java.lang.Integer" column="NetID"></property>
+		<property name="ai1" type="java.lang.Double" column="AI1"></property>
+		<property name="ai2" type="java.lang.Double" column="AI2"></property>
+		<property name="ai3" type="java.lang.Double" column="AI3"></property>
+		<property name="ai4" type="java.lang.Double" column="AI4"></property>
+		<property name="latitude_dir" type="java.lang.Integer" column="latitude_dir"></property>
+		<property name="latitude" type="java.lang.Double" column="latitude"></property>
+		<property name="longitude_dir" type="java.lang.Integer" column="Longitude_dir"></property>
+		<property name="longitude" type="java.lang.Double" column="Longitude"></property>
+		<property name="updateTime" type="java.util.Date" column="UpdateTime"></property>
+		<property name="runStatus" type="java.lang.Integer" column="RunStatus"></property>
+		<property name="alarmStatus" type="java.lang.Integer" column="AlarmStatus"></property>
+		<property name="connectStatus" type="java.lang.Integer" column="ConnectStatus"></property>
+		
+		<property name="unloadStatus" type="java.lang.Integer" column="UnloadStatus"></property>
+		<property name="speedStatus" type="java.lang.Integer" column="SpeedStatus"></property>
+		<property name="carSpeed" type="java.lang.Double" column="CarSpeed"></property>
+		<property name="AlarmData" type="java.lang.Integer" column="AlarmData"></property>
+		
+		<property name="projectCode" type="java.lang.String" column="projectCode"></property>
+		
+	</class>
+</hibernate-mapping>

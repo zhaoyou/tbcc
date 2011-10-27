@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+   administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccImageControls" table="TbccImageControls" schema="dbo" >
+        <id name="id" type="java.lang.Long">
+            <column name="Id" />
+            <generator class="native" />
+        </id>
+        
+        <!-- 
+        <many-to-one name="tbccProjectImages" class="org.tbcc.entity.TbccProjectImages" update="false" insert="false" fetch="select">
+            <column name="Id" not-null="true" unique="true" />
+        </many-to-one>
+         -->
+        
+        <property name="projectId" type="java.lang.String">
+            <column name="ProjectID" length="4" not-null="true" />
+        </property>
+        
+        <property name="imageId" type="java.lang.Long">
+            <column name="ImageId" length="4" not-null="true" />
+        </property>
+        <property name="netid" type="java.lang.Integer">
+            <column name="Netid" not-null="true" />
+        </property>
+        <property name="refid" type="java.lang.Integer">
+            <column name="Refid" not-null="true" />
+        </property>
+        <property name="portNo" type="java.lang.Integer">
+            <column name="PortNo" not-null="true" />
+        </property>
+        <property name="titleMsg" type="java.lang.String">
+            <column name="TitleMsg" length="30" />
+        </property>
+        <property name="tipMsg" type="java.lang.String">
+            <column name="TipMsg" length="30" />
+        </property>
+        <property name="unitMsg" type="java.lang.String">
+            <column name="UnitMsg" length="5" />
+        </property>
+        <property name="cleft" type="java.lang.Integer">
+            <column name="cLeft" not-null="true" />
+        </property>
+        <property name="ctop" type="java.lang.Integer">
+            <column name="cTop" />
+        </property>
+        <property name="cwidth" type="java.lang.Integer">
+            <column name="cWidth" />
+        </property>
+        <property name="cheight" type="java.lang.Integer">
+            <column name="cHeight" />
+        </property>
+        <property name="dataType" type="java.lang.Integer">
+            <column name="DataType" />
+        </property>
+    </class>
+</hibernate-mapping>

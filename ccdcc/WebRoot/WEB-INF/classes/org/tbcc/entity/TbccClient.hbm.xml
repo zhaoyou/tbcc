@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccClient" table="TbccClient" schema="dbo">
+    	
+    	<id name="id" type="java.lang.Long" column="Id">
+    		<generator class="native"></generator>
+    	</id>
+        
+        <property name="clientName" type="java.lang.String">
+            <column name="uClientName" />
+        </property>
+        
+        
+        <many-to-one name="transactionRole" column="TransactionRoleID" class="org.tbcc.entity.TbccTransactionRoles"></many-to-one>
+        
+        
+        
+        <property name="transactionId" type="java.lang.Long">
+            <column name="TransactionID"  not-null="true" />
+        </property>
+        
+        
+        
+        <set name="users" inverse="true">
+        	<key column="ClientID"></key>
+        	<one-to-many class="org.tbcc.entity.TbccUser" />
+        </set>
+        
+    </class>
+</hibernate-mapping>

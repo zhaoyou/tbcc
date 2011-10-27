@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service" 
+    class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+
+	 <!-- 
+	<destination id="stuBiz">
+		<properties>
+			<source>
+				org.zhaoyou.biz.StudentBiz
+			</source>
+		</properties>
+	</destination>
+	
+	<destination id="coldBiz">
+		<properties>
+			<source>org.zhaoyou.biz.ColdBiz</source>
+		</properties>
+	</destination>
+	 -->
+	 <!-- 这个是用来描绘移动车载历史曲线 -->
+	 <destination id="hiscar">
+	 	<properties>
+	 		<source>
+	 			org.tbcc.flex.RemoteHisCar
+	 		</source>
+	 	</properties>
+	 </destination>
+	 
+	 <!-- 这个是用来描绘小批零的历史曲线 -->
+	 <destination id="hisbox">
+	 	<properties>
+	 		<source>org.tbcc.flex.RemoteHisBox</source>
+	 	</properties>
+	 </destination>
+	 
+	 
+	 
+	 <!-- 这里是根据启停记录查询移动车载的数据的 -->
+	 <destination id="hiscar2">
+	 	<properties>
+	 		<source>org.tbcc.flex.RemoteHisCar2</source>
+	 	</properties>
+	 </destination>
+	 
+	 <!-- 这里根据启停记录，获取小批零的历史数据 -->
+	 <destination id="hisbox2">
+	 	<properties>
+	 		<source>org.tbcc.flex.RemoteHisBox2</source>
+	 	</properties>
+	 </destination>
+	 
+	 <!-- 查询冷库的相关信息 -->
+	 <destination id="hisref">
+	 		<properties>
+	 			<source>org.tbcc.flex.RemoteHisRef</source>
+	 		</properties>
+	 </destination>
+	 
+</service>

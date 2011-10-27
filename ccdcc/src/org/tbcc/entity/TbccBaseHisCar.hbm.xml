@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="org.tbcc.entity">
+		<class name="TbccBaseHisCar" mutable="false" table="tbcchiscar" >
+			<id name="id" type="java.lang.Long" column="id">
+				<generator class="native"></generator>
+			 </id>
+			 
+			 <property name="ai1" type="java.lang.Double" column="AI1"></property>
+			 <property name="ai2" type="java.lang.Double" column="AI2"></property>
+			 <property name="ai3" type="java.lang.Double" column="AI3"></property>
+			 <property name="ai4" type="java.lang.Double" column="AI4"></property>
+			 
+			 <property name="alarmStatus" type="java.lang.Integer" column="AlarmStatus"></property>
+			 <property name="parentId" type="java.lang.Long" column="parentId"></property>	 
+			 <property name="updateTime" type="java.util.Date" column="updateTime"></property>
+			 
+			 
+			 <property name="latitude" type="java.lang.Double" column="latitude"></property>
+			 <property name="latitude_dir" type="java.lang.Integer" column="latitude_dir"></property>
+			 <property name="longitude" type="java.lang.Double" column="longitude"></property>
+			 <property name="longitude_dir" type="java.lang.Integer" column="longitude_dir"></property>
+			 
+			 <property name="unloadStatus" type="java.lang.Integer" column="unloadStatus"></property>
+			 <property name="histAlarmStorageType" type="java.lang.Integer" column="histAlarmStorageType"></property>
+			 <property name="gpsStorageType" type="java.lang.Integer" column="gpsStorageType"></property>
+			 <property name="histDataStorageType" type="java.lang.Integer" column="histDataStorageType"></property>
+			 <property name="unloadStorageType" type="java.lang.Integer" column="unloadStorageType"></property>
+			 <property name="histAlarmData" type="java.lang.Integer" column="histAlarmData"></property>
+			 
+		</class>
+</hibernate-mapping>

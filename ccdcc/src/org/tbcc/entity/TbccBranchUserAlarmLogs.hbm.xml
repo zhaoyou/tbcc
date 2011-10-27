@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccBranchUserAlarmLogs" table="TbccBranchUserAlarmLogs" schema="dbo">
+    	
+    	<id name="logsId" type="java.lang.Long" column="logsId">
+    		<generator class="native"></generator>
+    	</id>
+
+		<property name="clientName"></property>
+
+		<property name="userName"></property>
+		
+		<property name="loginAddr" ></property>
+		
+		<property name="loginTime" type="java.util.Date"></property>
+		
+		<property name="logoutAlarmState" ></property>
+		
+		<property name="loginAlarmState"></property>
+		
+		<property name="logoutTime" type="java.util.Date"></property>
+    </class>
+</hibernate-mapping>

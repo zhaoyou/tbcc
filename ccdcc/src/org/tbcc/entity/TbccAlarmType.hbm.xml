@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccAlarmType" table="TbccAlarmType" schema="dbo" >
+      
+       <id name="id" type="java.lang.Long" column="Id">
+       	<generator class="native"></generator>
+       </id>
+       
+
+            <property name="appType" type="java.lang.Integer">
+            	<column name="appType"></column>
+            </property>
+            
+            <property name="alarmCode" type="java.lang.Integer">
+                <column name="AlarmCode" />
+            </property>
+
+        
+        <property name="alarmType" type="java.lang.Integer">
+            <column name="AlarmType" not-null="true" />
+        </property>
+        
+        <property name="alarmPort" type="java.lang.Integer">
+            <column name="AlarmPort" not-null="true" />
+        </property>
+        
+        <property name="alarmName" type="java.lang.String">
+            <column name="AlarmName" length="50" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

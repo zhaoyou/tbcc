@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="org.tbcc.entity.TbccBaseRealRef" table="TbccRealData_Ref"  schema="dbo">
+		<id name="id" type="java.lang.Long" column="Id">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="projectId" type="java.lang.String" column="ProjectID"></property>
+		<property name="neiId" type="java.lang.Integer" column="NetID"></property>
+		<property name="ai1" type="java.lang.Double" column="AI1"></property>
+		<property name="ai2" type="java.lang.Double" column="AI2"></property>
+		<property name="ai3" type="java.lang.Double" column="AI3"></property>
+		<property name="ai4" type="java.lang.Double" column="AI4"></property>
+		<property name="ai5" type="java.lang.Double" column="AI5"></property>
+		<property name="ai6" type="java.lang.Double" column="AI6"></property>
+		<property name="ai7" type="java.lang.Double" column="AI7"></property>
+		<property name="ai8" type="java.lang.Double" column="AI8"></property>
+		<property name="ai9" type="java.lang.Double" column="AI9"></property>
+		<property name="ai10" type="java.lang.Double" column="AI10"></property>
+		<property name="ai11" type="java.lang.Double" column="AI11"></property>
+		<property name="ai12" type="java.lang.Double" column="AI12"></property>
+		
+		<property name="ai13" type="java.lang.Double" column="AI13"></property>
+		<property name="ai14" type="java.lang.Double" column="AI14"></property>
+		<property name="ai15" type="java.lang.Double" column="AI15"></property>
+		<property name="ai16" type="java.lang.Double" column="AI16"></property>
+		<property name="ai17" type="java.lang.Double" column="AI17"></property>
+		<property name="ai18" type="java.lang.Double" column="AI18"></property>
+		<property name="ai19" type="java.lang.Double" column="AI19"></property>
+		<property name="ai20" type="java.lang.Double" column="AI20"></property>
+		<property name="ai21" type="java.lang.Double" column="AI21"></property>
+		<property name="ai22" type="java.lang.Double" column="AI22"></property>
+		<property name="ai23" type="java.lang.Double" column="AI23"></property>
+		<property name="ai24" type="java.lang.Double" column="AI24"></property>
+		<property name="ai25" type="java.lang.Double" column="AI25"></property>
+		<property name="ai26" type="java.lang.Double" column="AI26"></property>
+		<property name="ai27" type="java.lang.Double" column="AI27"></property>
+		<property name="ai28" type="java.lang.Double" column="AI28"></property>
+		<property name="ai29" type="java.lang.Double" column="AI29"></property>
+		<property name="ai30" type="java.lang.Double" column="AI30"></property>
+		<property name="ai31" type="java.lang.Double" column="AI31"></property>
+		<property name="ai32" type="java.lang.Double" column="AI32"></property>
+		
+		<property name="updateTime" type="java.util.Date" column="UpdateTime"></property>
+		
+		<property name="runStatus_Ref1" type="java.lang.Integer" column="RunStatus_Ref1"></property>
+		<property name="runStatus_Ref2" type="java.lang.Integer" column="RunStatus_Ref2"></property>
+		<property name="runStatus_Ref3" type="java.lang.Integer" column="RunStatus_Ref3"></property>
+		<property name="runStatus_Ref4" type="java.lang.Integer" column="RunStatus_Ref4"></property>
+		
+		<property name="runStatus_Ref5" type="java.lang.Integer" column="RunStatus_Ref5"></property>
+		<property name="runStatus_Ref6" type="java.lang.Integer" column="RunStatus_Ref6"></property>
+		<property name="runStatus_Ref7" type="java.lang.Integer" column="RunStatus_Ref7"></property>
+		<property name="runStatus_Ref8" type="java.lang.Integer" column="RunStatus_Ref8"></property>
+		<property name="runStatus_Ref9" type="java.lang.Integer" column="RunStatus_Ref9"></property>
+		<property name="runStatus_Ref10" type="java.lang.Integer" column="RunStatus_Ref10"></property>
+		<property name="runStatus_Ref11" type="java.lang.Integer" column="RunStatus_Ref11"></property>
+		<property name="runStatus_Ref12" type="java.lang.Integer" column="RunStatus_Ref12"></property>
+		<property name="runStatus_Ref13" type="java.lang.Integer" column="RunStatus_Ref13"></property>
+		<property name="runStatus_Ref14" type="java.lang.Integer" column="RunStatus_Ref14"></property>
+		<property name="runStatus_Ref15" type="java.lang.Integer" column="RunStatus_Ref15"></property>
+		<property name="runStatus_Ref16" type="java.lang.Integer" column="RunStatus_Ref16"></property>
+
+		
+		<property name="alarmStatus_Ref1" type="java.lang.Integer" column="AlarmStatus_Ref1"></property>
+		<property name="alarmStatus_Ref2" type="java.lang.Integer" column="AlarmStatus_Ref2"></property>
+		<property name="alarmStatus_Ref3" type="java.lang.Integer" column="AlarmStatus_Ref3"></property>
+		<property name="alarmStatus_Ref4" type="java.lang.Integer" column="AlarmStatus_Ref4"></property>
+		<property name="alarmStatus_Ref5" type="java.lang.Integer" column="AlarmStatus_Ref5"></property>
+		<property name="alarmStatus_Ref6" type="java.lang.Integer" column="AlarmStatus_Ref6"></property>
+		<property name="alarmStatus_Ref7" type="java.lang.Integer" column="AlarmStatus_Ref7"></property>
+		<property name="alarmStatus_Ref8" type="java.lang.Integer" column="AlarmStatus_Ref8"></property>
+		<property name="alarmStatus_Ref9" type="java.lang.Integer" column="AlarmStatus_Ref9"></property>
+		<property name="alarmStatus_Ref10" type="java.lang.Integer" column="AlarmStatus_Ref10"></property>
+		<property name="alarmStatus_Ref11" type="java.lang.Integer" column="AlarmStatus_Ref11"></property>
+		<property name="alarmStatus_Ref12" type="java.lang.Integer" column="AlarmStatus_Ref12"></property>
+		<property name="alarmStatus_Ref13" type="java.lang.Integer" column="AlarmStatus_Ref13"></property>
+		<property name="alarmStatus_Ref14" type="java.lang.Integer" column="AlarmStatus_Ref14"></property>
+		<property name="alarmStatus_Ref15" type="java.lang.Integer" column="AlarmStatus_Ref15"></property>
+		<property name="alarmStatus_Ref16" type="java.lang.Integer" column="AlarmStatus_Ref16"></property>
+
+		
+		
+		<property name="connectStatus" type="java.lang.Integer" column="ConnectStatus"></property>
+		
+		<property name="alarmStatus_Door1" type="java.lang.Integer" column="AlarmStatus_Door1"></property>
+		<property name="alarmStatus_Door2" type="java.lang.Integer" column="AlarmStatus_Door2"></property>
+		<property name="alarmStatus_Door3" type="java.lang.Integer" column="AlarmStatus_Door3"></property>
+		<property name="alarmStatus_Door4" type="java.lang.Integer" column="AlarmStatus_Door4"></property>
+		
+		<property name="alarmStatus_LostPower1" type="java.lang.Integer" column="AlarmStatus_LostPower1"></property>
+		<property name="alarmStatus_LostPower2" type="java.lang.Integer" column="AlarmStatus_LostPower2"></property>
+		<property name="alarmStatus_LostPower3" type="java.lang.Integer" column="AlarmStatus_LostPower3"></property>
+		<property name="alarmStatus_LostPower4" type="java.lang.Integer" column="AlarmStatus_LostPower4"></property>
+		
+		<property name="alarmStatus_Sound1" type="java.lang.Integer" column="AlarmStatus_Sound1"></property>
+		<property name="alarmStatus_Sound2" type="java.lang.Integer" column="AlarmStatus_Sound2"></property>
+		<property name="alarmStatus_Sound3" type="java.lang.Integer" column="AlarmStatus_Sound3"></property>
+		<property name="alarmStatus_Sound4" type="java.lang.Integer" column="AlarmStatus_Sound4"></property>
+		
+	</class>
+</hibernate-mapping>

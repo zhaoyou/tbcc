@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+   administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccHqUser" table="tbccHqUser" schema="dbo" >
+		
+		<id name="id" column="id" type="java.lang.Long">
+			<generator class="native"></generator>
+		</id>   
+         
+         <!-- 用户和数据业务逻辑对象配置关联关系 -->
+
+        <many-to-one name="hqRoles" column="uHqRoleID" class="org.tbcc.entity.TbccHqRoles" lazy="false"></many-to-one>
+       
+       <!-- 后来添加的代码 -->
+       	<many-to-one name="client" column="ClientID" class="org.tbcc.entity.TbccClient" lazy="false"></many-to-one>
+        <!--
+         <property name="clientId" type="java.lang.Long" column="clientId"></property>
+         <property name="uhqRoleId" type="java.lang.Long" column="uHqRoleID"></property>
+        -->         
+         <property name="uname" type="java.lang.String" column="uName"></property>
+         <property name="upassword" type="java.lang.String" column="uPassword"></property>
+         <property name="uenable" type="java.lang.Integer" column="uEnable"></property>
+         <property name="ucreated" type="java.lang.String" column="uCreated"></property>
+        
+    </class>
+</hibernate-mapping>

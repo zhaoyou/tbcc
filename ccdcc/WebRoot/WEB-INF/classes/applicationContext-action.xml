@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	
+	<!-- 这个配置文件主要是配置与Action相关的代码 -->
+	
+	<bean name="/user" class="org.tbcc.struts.action.UserAction">
+		<property name="userbiz" ref="userBiz"></property>
+		<property name="clientBiz" ref="clientBiz"></property>
+		<property name="branchBiz" ref="branchBiz"></property>
+		<property name="hqBiz" ref="hqBiz"></property>
+		<property name="branchUserAlarmLogsBiz" ref="branchUserAlarmLogsBiz"></property>
+	</bean>
+	
+	<bean name="/branch" class="org.tbcc.struts.action.BranchAction">
+		<property name="branchBiz" ref="branchBiz"></property>
+		<property name="projectBiz" ref="projectBiz"></property>
+		<property name="crmBiz" ref="crmBiz"></property>
+		<property name="userBiz" ref="userBiz"></property>
+	</bean>
+	
+	<bean name="/pro" class="org.tbcc.struts.action.ProjectAction">
+		<property name="proBiz" ref="projectBiz"></property>
+		<property name="crmBiz" ref="crmBiz"></property>
+		<property name="branchBiz" ref="branchBiz"></property>
+	</bean>
+	
+	<bean name="/area" class="org.tbcc.struts.action.AreaAction">
+	</bean>
+	
+	<bean name="/hq" class="org.tbcc.struts.action.HqAction">
+	<property name="hqBiz" ref="hqBiz"></property>
+	</bean>
+	
+	<bean name="/alarmlogs" class="org.tbcc.struts.action.BranchUserAlarmLogsAction">
+		<property name="branchUserAlarmLogsBiz" ref="branchUserAlarmLogsBiz"></property>
+	</bean>
+	
+	
+	<!-- 与数据相关的东西 -->
+	<bean name="/hiscar" class="org.tbcc.struts.action.HisCarAction">
+		<property name="hiscarBiz" ref="hiscarBiz"></property>
+		<property name="proBiz" ref="projectBiz"></property>
+		<property name="startupBiz" ref="startUpBiz"></property>
+	</bean>
+	
+	<bean name="/hiscaralarm" class="org.tbcc.struts.action.HisCarAlarmAction">
+		<property name="proBiz" ref="projectBiz"></property>
+		<property name="startupBiz" ref="startUpBiz"></property>
+		<property name="hiscaralarmbiz" ref="hiscaralarmbiz"></property>
+	</bean>
+	
+	<bean name="/realcar" class="org.tbcc.struts.action.RealCarAction">
+		<property name="hiscarBiz" ref="hiscarBiz"></property>
+		<property name="branchbiz" ref="branchBiz"></property>
+	</bean>
+	
+	
+	<bean name="/hisbox" class="org.tbcc.struts.action.HisBoxAction">
+		<property name="hisboxBiz" ref="hisboxBiz"></property>
+		<property name="proBiz" ref="projectBiz"></property>
+		<property name="startupBiz" ref="startUpBiz"></property>
+	</bean>
+	
+	<bean name="/realbox" class="org.tbcc.struts.action.RealBoxAction">
+	</bean>
+	
+	<bean name="/realref" class="org.tbcc.struts.action.RealRefAction">
+		<property name="aiInfoBiz" ref="aiInfoBiz"></property>
+		<property name="realrefBiz" ref="realrefBiz"></property>
+		<property name="refinfoBiz" ref="refInfoBiz"></property>
+		<property name="imageBiz" ref="getImageEachControlAllDatasImpl"></property>
+		<property name="projectBiz" ref="projectBiz"></property>
+	</bean>
+	
+	<bean name="/hisref" class="org.tbcc.struts.action.HisRefAction">
+		<property name="hisRefbiz" ref="hisrefBiz"></property>
+		<property name="projectBiz" ref="projectBiz"></property>
+		<property name="refInfoBiz" ref="refInfoBiz"></property>
+	</bean>
+	
+	<bean name="/startup" class="org.tbcc.struts.action.StartUpAction">
+		<property name="startUpBiz" ref="startUpBiz"></property>
+	</bean>
+	
+	
+	<!-- 用户后台 -->
+	<bean name="/configUser" class="org.tbcc.struts.action.ConfigUserAction">
+		<property name="userBiz" ref="userBiz"></property>
+		<property name="clientBiz" ref="clientBiz"></property>
+	</bean>
+	
+	<bean name="/configHqUser" class="org.tbcc.struts.action.ConfigHqUserAction">
+		<property name="userBiz" ref="userBiz"></property>
+	</bean>
+	<!-- 用户后台 -->
+	
+	<bean name="/realcool" class="org.tbcc.struts.action.RealCoolAction">
+		<property name="compressorSetBiz" ref="compressSetBiz"></property>
+		<property name="projectBiz" ref="projectBiz"></property>
+		<property name="aircoolerBiz" ref="aircoolerBiz"></property>
+		<property name="compressorBiz" ref="compressBiz"></property>
+		<property name="condenserBiz" ref="condenserBiz"></property>
+	</bean>
+	
+	<!-- 车载参数配置页面 -->
+	<bean name="/carparam" class="org.tbcc.struts.action.ParamOperateAction">
+		<property name="projectBiz" ref="projectBiz"></property>
+	</bean>
+	
+	<!-- 用户注册 -->
+	<bean name="/userRegister" class="org.tbcc.struts.action.UserRegisterAction">
+		<property name="userregisterbiz" ref="userRegisterBiz"></property>
+	</bean>
+	
+</beans>

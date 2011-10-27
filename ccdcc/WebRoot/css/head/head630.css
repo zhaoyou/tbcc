@@ -1,0 +1,151 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font:12px 宋体, Arial, Helvetica, sans-serif;
+}
+ul {
+	list-style:none;
+}
+#head {
+	width:990px;
+	margin:0 auto;
+}
+#banner {
+	height:97px;
+	background-image: url(../../images/head/head1.jpg);
+	background-repeat: no-repeat;
+	position: relative;
+}
+#banner li {
+	display:inline;
+	float:right;
+	margin:60px 5px 0 0;
+}
+
+#head #top a {
+	height: 21px;
+	width: 84px;
+	position: absolute;
+	right: 0px;
+	padding-top: 2px;
+}
+
+#head #top a:hover {
+	color: #FF4040;
+}
+
+#head #banner .nav_a a {
+	background-image: url(../../images/head/back.gif);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 74px;
+	position: absolute;
+	left: 744px;
+	top: 68px;
+}
+#head #banner .nav_a a:hover {
+	background-image: url(../../images/head/back_a.gif);
+	background-repeat: no-repeat;
+}
+#head #banner .nav_b a {
+	background-image: url(../../images/head/button.gif);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 74px;
+	position: absolute;
+	left: 825px;
+	top: 68px;
+}
+#head #banner .nav_b a:hover {
+	background-image: url(../../images/head/button_a.gif);
+	background-repeat: no-repeat;
+}
+#head #banner .nav_c a {
+	background-image: url(../../images/head/button_b.gif);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 74px;
+	position: absolute;
+	left: 904px;
+	top: 68px;
+}
+#head #banner .nav_c a:hover {
+	background-image: url(../../images/head/button_d.gif);
+	background-repeat: no-repeat;
+}
+#head #banner .logo {
+	background-repeat: no-repeat;
+	height: 65px;
+	width: 110px;
+	position: absolute;
+	left: 19px;
+	top: 14px;
+	margin-top: 10px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+#head #banner .font_a {
+	height: 30px;
+	width: 335px;
+	position: absolute;
+	left: 145px;
+	top: 46px;
+	margin: 0px;
+	font-size:28px;
+	height:34px;
+	color:#FFF;
+	font-size:32px;
+	font-family: "方正大标宋简体";
+	padding: 0px;
+	font-weight: bold;
+	letter-spacing: -0.05em;
+	line-height: 25px;
+}
+#head #banner .font_b {
+	height: 30px;
+	width: 310px;
+	position: absolute;
+	left: 148px;
+	top: 45px;
+	margin: 0px;
+	font-size:28px;
+	height:34px;
+	color:#eb4a03;
+	font-size:30px;
+	font-family: "方正大标宋简体";
+	padding: 0px;
+	letter-spacing: 0em;
+	font-weight: bold;
+	line-height: 28px;
+}
+#top {
+	height:28px;
+	background-image: url(../../images/head/menu_bg.gif);
+	background-repeat: repeat-x;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #adb4be;
+	border-bottom-color: #adb4be;
+	border-left-color: #adb4be;
+}
+#top p {
+	float:left;
+	margin:5px 0 0 10px;
+	font-weight: bold;
+	color: #454343;
+}
+#top span {
+	line-height:28px;
+	margin-right:30px;
+	position: absolute;
+	left: 700px;
+}
+
+

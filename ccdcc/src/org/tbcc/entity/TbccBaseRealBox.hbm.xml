@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="org.tbcc.entity.TbccBaseRealBox" table="TbccRealData_Box" schema="dbo">
+		<id name="id" type="java.lang.Long" column="Id">
+			<generator class="native"></generator>
+		</id>
+		<property name="projectId" type="java.lang.String" column="ProjectID"></property>
+		<property name="netId" type="java.lang.Integer" column="NetID"></property>
+		<property name="ai1" type="java.lang.Double" column="AI1"></property>
+		<property name="latitude_dir" type="java.lang.Integer" column="latitude_dir"></property>
+		<property name="latitude" type="java.lang.Double" column="latitude"></property>
+		<property name="longitude_dir" type="java.lang.Integer" column="Longitude_dir"></property>
+		<property name="longitude" type="java.lang.Double" column="Longitude"></property>
+		<property name="updateTime" type="java.util.Date" column="UpdateTime"></property>
+		<property name="runStatus" type="java.lang.Integer" column="RunStatus"></property>
+		<property name="alarmStatus" type="java.lang.Integer" column="AlarmStatus"></property>
+		<property name="connectStatus" type="java.lang.Integer" column="ConnectStatus"></property>
+	</class>
+</hibernate-mapping>

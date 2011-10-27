@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccDiDoInfo" table="TbccDiDoInfo" schema="dbo" >
+
+            <id name="id" type="java.lang.Long">
+                <column name="Id" />
+                <generator class="native"></generator>
+            </id>
+            
+            <property name="projectId" type="java.lang.String">
+                <column name="projectID" length="4" />
+            </property>
+            <property name="netid" type="java.lang.Integer">
+                <column name="Netid" />
+            </property>
+            <property name="refid" type="java.lang.Integer">
+                <column name="Refid" />
+            </property>
+            <property name="portType" type="java.lang.Integer">
+                <column name="PortType" />
+            </property>
+            <property name="seqPortNo" type="java.lang.Integer">
+                <column name="SeqPortNo" />
+            </property>
+
+        <property name="dataType" type="java.lang.Integer">
+            <column name="DataType" not-null="true" />
+        </property>
+        <property name="portNo" type="java.lang.Integer">
+            <column name="PortNo" not-null="true" />
+        </property>
+        <property name="portName" type="java.lang.String">
+            <column name="PortName" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

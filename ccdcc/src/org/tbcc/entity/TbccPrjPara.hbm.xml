@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    administrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.TbccPrjPara" table="TbccPrjPara" schema="dbo" >
+
+            
+            
+            <id name="projectId" type="java.lang.String">
+                <column name="projectID" length="4" />
+                  <generator class="native"></generator>
+            </id>
+       
+        <property name="rdReqInval" type="java.lang.Integer">
+            <column name="RdReqInval" not-null="true" />
+        </property>
+        <property name="rdValidPeriod" type="java.lang.Integer">
+            <column name="RdValidPeriod" not-null="true" />
+        </property>
+        <property name="raValidPeriod" type="java.lang.Integer">
+            <column name="RaValidPeriod" not-null="true" />
+        </property>
+        <property name="histSaveInval" type="java.lang.Integer">
+            <column name="HistSaveInval" not-null="true" />
+        </property>
+        <property name="tcpRetransInval" type="java.lang.Integer">
+            <column name="TcpRetransInval" not-null="true" />
+        </property>
+        <property name="tcpRetransNum" type="java.lang.Integer">
+            <column name="TcpRetransNum" not-null="true" />
+        </property>
+        <property name="hbStartTime" type="java.lang.Integer">
+            <column name="HbStartTime" not-null="true" />
+        </property>
+        <property name="hbReTransInval" type="java.lang.Integer">
+            <column name="HbReTransInval" not-null="true" />
+        </property>
+        <property name="hbReTransNum" type="java.lang.Integer">
+            <column name="HbReTransNum" not-null="true" />
+        </property>
+        <property name="reDialInval" type="java.lang.Integer">
+            <column name="ReDialInval" not-null="true" />
+        </property>
+        
+        <property name="histUploadEnable" type="java.lang.Integer"  column="HistUploadEnable"></property>
+    </class>
+</hibernate-mapping>

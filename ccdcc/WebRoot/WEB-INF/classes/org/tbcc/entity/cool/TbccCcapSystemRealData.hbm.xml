@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+   	adminitrator
+-->
+<hibernate-mapping>
+    <class name="org.tbcc.entity.cool.TbccCcapSystemRealData" table="tbccCcapSystemRealData" schema="dbo" >
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        
+        <property name="projectId" type="java.lang.String" column="projectId"></property>
+        <property name="dynamoState" type="java.lang.Integer" column="dynamoState"></property>
+        <property name="dynamoAlarm" type="java.lang.Integer" column="dynamoAlarm"></property>
+        <property name="sysoutageState" type="java.lang.Integer" column="sysoutageState"></property>
+        <property name="sysoutageAlarm" type="java.lang.Integer" column="sysoutageAlarm"></property>
+    </class>
+</hibernate-mapping>

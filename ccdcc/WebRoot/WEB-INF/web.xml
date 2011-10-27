@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+  
+  <!-- 配置struts文件 -->
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  
+  
+  <!-- spring 配置文件  -->
+  <context-param>
+  		<description>load spring webcontext path</description>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>classpath:applicationContext-*.xml</param-value>
+  </context-param>
+  
+  <listener>
+  	<description>listener web container start，to init spring container</description>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <listener>
+  	<description>lister web container start </description>
+  	<listener-class>org.tbcc.util.MyContentLister</listener-class>
+  </listener>
+  
+  <!-- spring 配置 session的开启方式 -->
+  <filter>
+  	<description>spring and hibernate Session</description>
+  	<filter-name>openViewSession</filter-name>
+  	<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>openViewSession</filter-name>
+  	<url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  
+  <!-- 配置字符处理器(过滤器) -->
+  <filter>
+  	<description>charater encoding</description>
+  	<filter-name>Encoding</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>gbk</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>Encoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 配置dwr配置文件 -->
+  <servlet>
+  	<servlet-name>dwr</servlet-name>
+  	<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+  	<init-param>
+  		<param-name>debug</param-name>
+  		<param-value>false</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>dwr</servlet-name>
+  	<url-pattern>/dwr/*</url-pattern>
+  </servlet-mapping>
+  
+  	
+   <!-- 这是配置flex客户端的信息 -->
+    <context-param>
+		<param-name>flex.class.path</param-name>
+		<param-value>/WEB-INF/flex/hotfixes,/WEB-INF/flex/jars</param-value>
+	</context-param>
+
+    <!-- Http Flex Session attribute and binding listener support -->
+    <listener>
+        <listener-class>flex.messaging.HttpFlexSession</listener-class>
+    </listener>
+
+    <!-- MessageBroker Servlet -->
+    <servlet>
+        <servlet-name>MessageBrokerServlet</servlet-name>
+        <servlet-class>flex.messaging.MessageBrokerServlet</servlet-class>
+        <init-param>
+            <param-name>services.configuration.file</param-name>
+            <param-value>/WEB-INF/flex/services-config.xml</param-value>
+       </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+
+
+    <servlet-mapping>
+        <servlet-name>MessageBrokerServlet</servlet-name>
+        <url-pattern>/messagebroker/*</url-pattern>
+    </servlet-mapping>
+  
+  
+  
+  
+  <!-- action 映射文件 -->
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+
+  <!-- 设置默认404，页面和505页面  -->
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/404_r.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/500_r.jsp</location>
+  </error-page>
+ 
+  <!-- 欢迎文件，默认进入文件 -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+</web-app>
+

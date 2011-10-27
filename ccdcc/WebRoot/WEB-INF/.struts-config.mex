@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/user.do" location="950,50" dimension="358,84" />
+  <StrutsActivity path="/branch.do" location="350,150" dimension="358,84" />
+  <StrutsActivity path="/pro.do" location="950,250" dimension="358,84" />
+  <StrutsActivity path="/area.do" location="50,350" dimension="358,84" />
+  <StrutsActivity path="/hq.do" location="650,450" dimension="358,84" />
+  <StrutsActivity path="/alarmlogs.do" location="2450,1850" dimension="106,70" />
+  <StrutsActivity path="/hiscar.do" location="50,550" dimension="358,84" />
+  <StrutsActivity path="/hiscaralarm.do" location="2450,2050" dimension="358,84" />
+  <StrutsActivity path="/realcar.do" location="650,650" dimension="358,84" />
+  <StrutsActivity path="/hisbox.do" location="50,850" dimension="88,60" />
+  <StrutsActivity path="/realbox.do" location="650,850" dimension="358,84" />
+  <StrutsActivity path="/realref.do" location="50,1050" dimension="358,84" />
+  <StrutsActivity path="/hisref.do" location="1250,550" dimension="88,60" />
+  <StrutsActivity path="/startup.do" location="950,1050" dimension="358,84" />
+  <StrutsActivity path="/realcool.do" location="1550,850" dimension="358,84" />
+  <StrutsActivity path="/configUser.do" location="1550,650" dimension="358,84" />
+  <StrutsActivity path="/configHqUser.do" location="1850,350" dimension="362,104" />
+  <StrutsActivity path="/carparam.do" location="950,1450" dimension="362,104" />
+  <StrutsActivity path="/userRegister.do" location="350,2050" dimension="358,84" />
+  <StrutsActivity path="index;6" location="50,50" dimension="76,72" />
+  <StrutsActivity path="/index.jsp" location="650,50" dimension="100,48" />
+  <StrutsActivity path="/main/main.jsp" location="950,1650" dimension="118,53" />
+  <StrutsActivity path="/projectlist.jsp" location="50,250" dimension="136,48" />
+  <StrutsActivity path="/main/carlist.jsp" location="2150,550" dimension="124,53" />
+  <StrutsActivity path="/main/reflist.jsp" location="2150,750" dimension="122,53" />
+  <StrutsActivity path="/hqbranch2.jsp" location="1850,1850" dimension="110,51" />
+  <StrutsActivity path="/branchUserLogs.jsp" location="2150,250" dimension="154,48" />
+  <StrutsActivity path="/car/carallhismap2.jsp" location="1550,1850" dimension="147,51" />
+  <StrutsActivity path="/car/carhismap2.jsp" location="1250,1850" dimension="135,51" />
+  <StrutsActivity path="/carstartup.jsp" location="650,1150" dimension="130,48" />
+  <StrutsActivity path="/carallhisMap.jsp" location="1550,250" dimension="142,48" />
+  <StrutsActivity path="/hiscarlist2.jsp" location="50,1250" dimension="136,48" />
+  <StrutsActivity path="/hiscarlist.jsp" location="650,350" dimension="130,48" />
+  <StrutsActivity path="/car/carstartup2.jsp" location="350,1850" dimension="146,53" />
+  <StrutsActivity path="/carhisMap.jsp" location="1550,550" dimension="124,48" />
+  <StrutsActivity path="/car/hiscarcurve.jsp" location="950,1850" dimension="134,51" />
+  <StrutsActivity path="/car/hiscarlist3.jsp" location="650,1850" dimension="137,53" />
+  <StrutsActivity path="/car/hiscaralarm.jsp" location="950,2150" dimension="160,48" />
+  <StrutsActivity path="/hiscaralarm.jsp" location="50,2150" dimension="136,48" />
+  <StrutsActivity path="/realcarlist.jsp" location="50,750" dimension="136,48" />
+  <StrutsActivity path="/carrealMap.jsp" location="1550,450" dimension="130,48" />
+  <StrutsActivity path="/car/carrealmap2.jsp" location="2150,1750" dimension="153,53" />
+  <StrutsActivity path="/car/realcarlist2.jsp" location="50,1750" dimension="143,53" />
+  <StrutsActivity path="/boxstartup.jsp" location="350,1250" dimension="130,48" />
+  <StrutsActivity path="/hisboxlist.jsp" location="350,850" dimension="130,48" />
+  <StrutsActivity path="/ccdc-debug/hisbox2.html" location="650,1250" dimension="184,48" />
+  <StrutsActivity path="/hisboxlist2.jsp" location="1250,450" dimension="136,48" />
+  <StrutsActivity path="/realboxlist.jsp" location="350,950" dimension="136,48" />
+  <StrutsActivity path="/exeget/realreflist2.jsp" location="1850,550" dimension="184,48" />
+  <StrutsActivity path="/ref/realrefsys.jsp" location="2150,1150" dimension="134,53" />
+  <StrutsActivity path="/realreflist.jsp" location="650,1050" dimension="136,48" />
+  <StrutsActivity path="/projectimage.jsp" location="350,1350" dimension="142,48" />
+  <StrutsActivity path="/realrefcustomer.jsp" location="650,1350" dimension="160,48" />
+  <StrutsActivity path="/ref/realreflist2.jsp" location="2150,950" dimension="139,53" />
+  <StrutsActivity path="/exeget/realrefsys.jsp" location="1250,2150" dimension="172,48" />
+  <StrutsActivity path="/ref/realrefimage.jsp" location="2450,550" dimension="138,51" />
+  <StrutsActivity path="/ref/realrefcustomersys.jsp" location="2150,1550" dimension="188,53" />
+  <StrutsActivity path="/ref/realrefcustomer2.jsp" location="1550,1650" dimension="177,53" />
+  <StrutsActivity path="/ref/hisreflist2.jsp" location="2150,1350" dimension="133,53" />
+  <StrutsActivity path="/ref/hisrefcurve.jsp" location="1850,1650" dimension="141,53" />
+  <StrutsActivity path="/hisreflist.jsp" location="1250,750" dimension="130,48" />
+  <StrutsActivity path="/realcoolersingledata2.jsp" location="350,1650" dimension="183,53" />
+  <StrutsActivity path="/realcoolerdata.jsp" location="1550,1350" dimension="154,48" />
+  <StrutsActivity path="/realcoolerdata2.jsp" location="650,1650" dimension="149,53" />
+  <StrutsActivity path="/realcoolersingledata.jsp" location="50,1450" dimension="190,48" />
+  <StrutsActivity path="/realcoolersys.jsp" location="50,1550" dimension="134,53" />
+  <StrutsActivity path="/admin/configuserlist.jsp" location="50,1950" dimension="163,51" />
+  <StrutsActivity path="/admin/upUser2.jsp" location="2450,850" dimension="135,51" />
+  <StrutsActivity path="/addUser.jsp" location="1550,1050" dimension="112,48" />
+  <StrutsActivity path="/configUser.jsp" location="1550,1150" dimension="130,48" />
+  <StrutsActivity path="/upUser.jsp" location="1550,1250" dimension="106,48" />
+  <StrutsActivity path="/adminUser.jsp" location="950,1350" dimension="124,48" />
+  <StrutsActivity path="/admin/addUser2.jsp" location="2150,1950" dimension="141,51" />
+  <StrutsActivity path="configUser.jsp" location="1250,1350" dimension="124,48" />
+  <StrutsActivity path="/admin/addHqUser2.jsp" location="2450,1050" dimension="157,51" />
+  <StrutsActivity path="/upHqUser.jsp" location="1850,1050" dimension="116,53" />
+  <StrutsActivity path="/admin/confighquserlist.jsp" location="2450,1250" dimension="177,51" />
+  <StrutsActivity path="/admin/upHqUser2.jsp" location="2450,1450" dimension="151,51" />
+  <StrutsActivity path="/addHqUser.jsp" location="1850,1250" dimension="124,53" />
+  <StrutsActivity path="/configHqUser.jsp" location="350,1450" dimension="137,53" />
+  <StrutsActivity path="configHqUser.jsp" location="650,1450" dimension="132,53" />
+  <StrutsActivity path="/carparam.jsp" location="1550,1450" dimension="113,53" />
+  <StrutsActivity path="carparam.jsp" location="1850,1450" dimension="108,53" />
+  <StrutsActivity path="/userRegister.jsp" location="1550,2050" dimension="142,48" />
+  <StrutsActivity path="/uRegisterSucceed.jsp" location="1850,2050" dimension="166,48" />
+  <StrutsActivity path="/.jsp" location="1250,2050" dimension="70,48" />
+  <StrutsActivity path="/realrefimage.jsp" location="2450,1650" dimension="119,51" />
+  <StrutsActivity path="/main.jsp" location="1250,1650" dimension="85,53" />
+  <StrutsActivity path="/hqbranch.jsp" location="1850,250" dimension="118,48" />
+  <StrutsActivity path="/ccdc-debug/hiscar2.html" location="1250,950" dimension="184,48" />
+  <StrutsActivity path="/ccdc-debug/hisref.html" location="950,1250" dimension="178,48" />
+  <StrutsActivity path="/map/carrealMap.jsp" location="1550,350" dimension="154,48" />
+  <StrutsActivity path="/ccdc-debug/hiscar.html" location="350,750" dimension="178,48" />
+  <StrutsActivity path="" location="350,50" dimension="40,48" />
+  <StrutsActivity path="/" location="1250,850" dimension="46,48" />
+  <StrutsActivity path="/refcurve.jsp" location="1250,1250" dimension="118,48" />
+  <StrutsActivity path="/ccdc_debug/hisref.html" location="50,1350" dimension="178,48" />
+  <StrutsActivity path="/aa.jsp" location="950,2050" dimension="82,48" />
+  <StrutsActivity path="/exeget/realcarlist2.jsp" location="1550,2150" dimension="184,48" />
+  <StrutsActivity path="/exeget/carrealmap2.jsp" location="2750,950" dimension="178,48" />
+  <StrutsTransition id="/hisbox.do,hboxStart,/boxstartup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="64,910" />
+      <AbsolutePoint location="64,1013" />
+      <AbsolutePoint location="445,1013" />
+      <AbsolutePoint location="445,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,realrefsysCus,/ref/realrefcustomersys.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configHqUser.do,listHqUser,/configHqUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcool.do,mulcool2,/realcoolerdata2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1729,892" />
+      <AbsolutePoint location="724,1676" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,realfloor2,/ref/realrefimage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1092" />
+      <AbsolutePoint location="2519,575" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,hcarStart,/carstartup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,592" />
+      <AbsolutePoint location="715,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/alarmlogs.do,logslist,/branchUserLogs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2503,1885" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configUser.do,addUser2,/admin/addUser2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1729,692" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcarlist.jsp,null,/realcar.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="118,750" />
+      <AbsolutePoint location="118,662" />
+      <AbsolutePoint location="650,662" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscarlist.jsp,null,/hiscar.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="715,374" />
+      <AbsolutePoint location="229,592" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,realrefsys_exe,/exeget/realrefsys.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="213,1134" />
+      <AbsolutePoint location="213,1318" />
+      <AbsolutePoint location="1400,1318" />
+      <AbsolutePoint location="1400,2150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,hisMap,/carhisMap.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,592" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,realrefCus,/ref/realrefcustomer2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configUser.do,listAdmin,/adminUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcool.do,singlecool,/realcoolersingledata.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1729,892" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcar.do,realmap2,/car/carrealmap2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,692" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configUser.do,upUser2,/admin/upUser2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1908,692" />
+      <AbsolutePoint location="2517,692" />
+      <AbsolutePoint location="2517,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="configUser.jsp,null,/configUser.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configUser.do,upUser,/upUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,realrefsys,/ref/realrefsys.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configHqUser.do,listHqUser2,/admin/confighquserlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2031,402" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcar.do,realmap2,/exeget/carrealmap2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,650" />
+      <AbsolutePoint location="829,625" />
+      <AbsolutePoint location="2839,625" />
+      <AbsolutePoint location="2839,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configUser.do,listUser2,/admin/configuserlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1729,692" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,hisallmap2,/car/carallhismap2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,592" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,realref2,/ref/realreflist2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,carCurve,/car/hiscarcurve.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,592" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,carstartup,/car/carstartup2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,592" />
+      <AbsolutePoint location="-120,592" />
+      <AbsolutePoint location="-120,1876" />
+      <AbsolutePoint location="350,1876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hisref.do,hisref2,/ref/hisreflist2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1294,580" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configHqUser.do,addHqUser2,/admin/addHqUser2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2031,402" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcar.do,realmap2_exe,/exeget/carrealmap2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,692" />
+      <AbsolutePoint location="2839,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="carparam.jsp,null,/carparam.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1131,1502" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcool.do,singlecool2,/realcoolersingledata2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1789,934" />
+      <AbsolutePoint location="1789,1778" />
+      <AbsolutePoint location="441,1778" />
+      <AbsolutePoint location="441,1703" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,hiscar,/car/hiscarlist3.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,592" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,hcarlist2,/hiscarlist2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,592" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hisboxlist.jsp,null,/hisbox.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,874" />
+      <AbsolutePoint location="138,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hisreflist.jsp,null,/hisref.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1315,750" />
+      <AbsolutePoint location="1315,610" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/startup.do,car_startup,/carstartup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="715,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,hisallMap,/carallhisMap.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,592" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,realfloor,/projectimage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="configHqUser.jsp,null,/configHqUser.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hisbox.do,hisbox2,/hisboxlist2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,880" />
+      <AbsolutePoint location="-45,880" />
+      <AbsolutePoint location="-45,-45" />
+      <AbsolutePoint location="1323,-45" />
+      <AbsolutePoint location="1323,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcool.do,mulcool,/realcoolerdata.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1729,892" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,customer,/realrefcustomer.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hisref.do,hisref,/hisreflist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1294,580" />
+      <AbsolutePoint location="1315,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcar.do,reallist2_exe,/car/realcarlist2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,692" />
+      <AbsolutePoint location="-195,692" />
+      <AbsolutePoint location="-195,1776" />
+      <AbsolutePoint location="50,1776" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcool.do,realsys,/realcoolersys.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1729,934" />
+      <AbsolutePoint location="1729,1576" />
+      <AbsolutePoint location="184,1576" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hisbox.do,hisbox,/hisboxlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="94,850" />
+      <AbsolutePoint location="94,813" />
+      <AbsolutePoint location="415,813" />
+      <AbsolutePoint location="415,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realbox.do,realbox,/realboxlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,892" />
+      <AbsolutePoint location="418,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,index,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,83" />
+      <AbsolutePoint location="750,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,realref,/realreflist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1092" />
+      <AbsolutePoint location="718,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realboxlist.jsp,null,/realbox.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="486,974" />
+      <AbsolutePoint location="829,974" />
+      <AbsolutePoint location="829,934" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,hismap2,/car/carhismap2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,592" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userRegister.do,userregister,/userRegister.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="708,2113" />
+      <AbsolutePoint location="1621,2113" />
+      <AbsolutePoint location="1621,2098" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscar.do,hcarlist,/hiscarlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,592" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="index;6,null,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="126,113" />
+      <AbsolutePoint location="700,113" />
+      <AbsolutePoint location="700,98" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hisref.do,refCurve,/ref/hisrefcurve.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1294,580" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcar.do,reallist2_exe,/exeget/realcarlist2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1008,692" />
+      <AbsolutePoint location="1479,692" />
+      <AbsolutePoint location="1479,2174" />
+      <AbsolutePoint location="1550,2174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscaralarm.jsp,null,/hiscaralarm.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="118,2198" />
+      <AbsolutePoint location="118,2273" />
+      <AbsolutePoint location="2659,2273" />
+      <AbsolutePoint location="2659,2134" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configHqUser.do,upHqUser,/upHqUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hisbox.do,boxCurve,/ccdc-debug/hisbox2.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="94,910" />
+      <AbsolutePoint location="94,925" />
+      <AbsolutePoint location="603,925" />
+      <AbsolutePoint location="603,1274" />
+      <AbsolutePoint location="650,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hiscaralarm.do,hiscaralarm,/car/hiscaralarm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2629,2134" />
+      <AbsolutePoint location="2629,2363" />
+      <AbsolutePoint location="1030,2363" />
+      <AbsolutePoint location="1030,2198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pro.do,reflist,/main/reflist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realref.do,realref2_exe,/exeget/realreflist2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configHqUser.do,upHqUser2,/admin/upHqUser2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2031,402" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/startup.do,box_startup,/boxstartup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,1134" />
+      <AbsolutePoint location="1129,1373" />
+      <AbsolutePoint location="415,1373" />
+      <AbsolutePoint location="415,1298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/branch.do,plist,/projectlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="529,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realreflist.jsp,null,/realref.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1074" />
+      <AbsolutePoint location="408,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configUser.do,listUser,/configUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/branch.do,main,/main/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="529,192" />
+      <AbsolutePoint location="1009,1676" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/startup.do,car_startup2,/car/carstartup2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,1092" />
+      <AbsolutePoint location="423,1876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/carparam.do,toparam,/carparam.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1312,1458" />
+      <AbsolutePoint location="1550,1458" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcar.do,reallist,/realcarlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,692" />
+      <AbsolutePoint location="118,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcar.do,reallist2,/car/realcarlist2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,692" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userRegister.do,registerSucceed,/uRegisterSucceed.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="529,2092" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pro.do,carlist,/main/carlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1129,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configHqUser.do,addHqUser,/addHqUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/realcar.do,realMap,/carrealMap.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,692" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hq.do,hqbranch,/hqbranch2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1008,513" />
+      <AbsolutePoint location="2066,513" />
+      <AbsolutePoint location="2066,1875" />
+      <AbsolutePoint location="1960,1875" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/configUser.do,addUser,/addUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

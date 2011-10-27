@@ -1,0 +1,27 @@
+#macstyle .select_box{
+	width:91px;
+	height:24px;
+	background-color:red;
+font-size:20pt;
+font-family:impact;
+color:blue;
+
+}
+#right #center select {
+	height: 20px;
+	width: 130px;
+	border: 1px solid #54a5d5;
+	font-size:9pt;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333333;
+	background-color: #F4F4F4;
+	padding: 0px;
+}
+#right #center h3 {color: #090;
+	height: 28px;
+	line-height: 22px;
+	width: 82px;
+	display: block;
+	font-size: 12px;
+	float: left;
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+    "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+	<allow>
+	
+		<!-- 这是移动车载的实时数据的远程类 
+		<create javascript="realcar" creator="spring">
+			<param name="beanName" value="realcarBiz"></param>
+			<param name="location" value="classpath:applicationContext-*.xml"></param>
+			<include method="getRealData"/>
+		</create>
+		
+		
+		
+		<create javascript="realcar" creator="new">
+			<param name="class" value="org.tbcc.dwr.RealDwr"></param>
+			<include method="getRealCar"/>
+			<include method="getRealBox"/>
+		</create>
+		
+		-->
+		
+		<!-- 这是小批零的实时数据远程类 
+		<create javascript="realbox" creator="spring">
+			<param name="beanName" value="realboxBiz"></param>
+			<param name="location" value="classpath:applicationContext-*.xml"></param>
+			<include method="getRealBox"/>
+		</create>
+		-->
+		<create javascript="real" creator="new">
+			<param name="class" value="org.tbcc.dwr.RealDwr"></param>
+			<include method="getRealBox"/>
+			<include method="getRealCar"/>
+			<include method="getRealFloor"/>
+			<include method="getCarToMap"/>
+			<include method="getHisCarData"/>
+			<include method="getRefListById"/>		
+			<include method="getProjectImages"/>
+			<include method="getRealRefSys"/>
+		</create>
+		<convert match="org.tbcc.entity.TbccBaseRealBox" converter="bean"></convert>
+		<convert match="org.tbcc.entity.TbccBaseRealCar" converter="bean"></convert>
+		<convert match="org.tbcc.entity.TbccBaseHisCar" converter="bean">
+			<param name="include" value="id,ai1,ai2,ai3,ai4,latitude_dir,latitude,longitude_dir,longitude,alarmStatus,updateTime,unloadStatus" ></param>
+		</convert>
+		<convert match="org.tbcc.entity.TbccRefInfo" converter="bean"></convert>
+		
+		<convert match="org.tbcc.entity.TbccProjectImages" converter="bean"></convert>
+		
+		
+		
+		<!-- 这个事启停记录的数据远程类
+		<create javascript="startup" creator="spring">
+			<param name="beanName" value="startUpBiz"></param>
+			<param name="location" value="classpath:applicationContext-*.xml"></param>
+			<include method="getStartUpList"/>
+		</create>
+		<convert match="org.tbcc.entity.TbccBaseHisStartUp" converter="bean"></convert>
+		 -->
+		
+		<!-- 制冷相关的实时数据远程调用类 -->
+		<create javascript="realcool" creator="new">
+			<param name="class" value="org.tbcc.dwr.RealCool"></param>
+			<include method="getMultiData"/>
+			<include method="getSingleData"/>
+			
+			<include method="getCompressorDataByIds"/>
+			<include method="getCondenserDataByIds"/>
+			<include method="getAirCoolerDataByIds"/>
+			
+			
+			
+			<include method="getCoolerSysRealData"/>
+		</create>
+		
+		<convert match="org.tbcc.entity.cool.TbccMultiCompressorRealData" converter="bean"></convert>
+		<convert match="org.tbcc.entity.cool.TbccSingleCompressorRealData" converter="bean"></convert>
+		<convert match="org.tbcc.entity.cool.TbccAirCoolerRealData" converter="bean"></convert>
+		<convert match="org.tbcc.entity.cool.TbccCompressorRealData" converter="bean"></convert>
+		<convert match="org.tbcc.entity.cool.TbccCondenserRealData" converter="bean"></convert>
+		<convert match="org.tbcc.entity.cool.TbccCcapSystemRealData" converter="bean"></convert>
+		
+		
+		<!-- 参数配置相关的远程调用类 -->
+		<create javascript="configOperate" creator="new">
+			<param name="class" value="org.tbcc.dwr.CarParamOperate"></param>
+			<include method="insertOperate"/>
+			<include method="QueryOptStatus"/>
+			<include method="UpdateOptStatus"/>
+			<include method="QueryCarParam"/>
+			<include method="UpdateCarParam"/>
+			<include method="addUpdateResultLog"/>		
+		</create>
+		
+		<convert match="org.tbcc.log.entity.TbccLog" converter="bean">
+			<param name="include" value="uid,uname,machineName,ext01,ext02,message"></param>
+		</convert>
+	</allow>
+	
+</dwr>

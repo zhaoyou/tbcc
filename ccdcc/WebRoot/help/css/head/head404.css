@@ -1,0 +1,179 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family: "宋体";
+	font-size: 12px;
+	text-align: center;
+	
+}
+ul{
+	list-style-type:none;}
+img, h1, div {
+	border:0;
+}
+#head {
+	width:1024px;
+	background-color: #d7eefe;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 169px;
+	
+}
+
+
+#banner li {
+	display:inline;
+	float:right;
+	margin-top: 60px;
+	margin-right: 5px;
+	margin-bottom: 0;
+	margin-left: 0px;
+}
+#head #nav_mail {
+	background-image: url(../../images/index/ba_a.gif);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	height: 32px;
+	width: 1008px;
+	text-align: center;
+	margin-left: auto;
+	margin-top: 15px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+#nav_mail li {
+	float: left;
+}
+#head #nav_mail .s {
+	background-image: url(../../images/index/bg1.gif);
+	height: 32px;
+	width: 99px;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#head #nav_mail .a {
+	background-image: url(../../images/bg1.gif);
+	background-repeat: no-repeat;
+	display: block;
+	height: 32px;
+	width: 13px;
+}
+#head #nav_mail .b {
+	background-image: url(../../images/index/index.gif);
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 99px;
+	display: block;
+}
+#head #nav_mail .b:hover {
+	
+	display: block;
+}
+#head #nav_mail .c {
+	background-image: url(../../images/index/button_aa.gif);
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 99px;
+	display: block;
+}
+#head #nav_mail .c:hover {
+	background-image: url(../../images/index/button_a.gif);
+	background-repeat: no-repeat;
+}
+#head #nav_mail .d {
+	background-image: url(../../images/index/button_bb.gif);
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 123px;
+	display: block;
+}
+#head #nav_mail .d:hover {
+	background-image: url(../../images/index/button_b.gif);
+	background-repeat: no-repeat;
+}
+#head #nav_mail .e {
+	background-image: url(../../images/index/button_dd.gif);
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 123px;
+	display: block;
+}
+#head #nav_mail .e:hover {
+	background-image: url(../../images/index/button_d.gif);
+	background-repeat: no-repeat;
+}
+#head #nav_mail .f {
+	background-image: url(../../images/index/button_c.gif);
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 124px;
+	display: block;
+	background-position: 0px 0px;
+}
+#head #nav_mail .f:hover {
+	background-image: url(../../images/index/button_cc.gif);
+	background-repeat: no-repeat;
+}
+#head #nav_mail #g {
+	background-image: url(../../images/ba_a.gif);
+	display: block;
+	height: 32px;
+	width: 2px;
+}
+
+}
+#head #nav_mail #h {
+	display: block;
+	position: absolute;
+	left: 480px;
+}
+
+#head #line {
+	display: block;
+	height: 5px;
+	width: 1008px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#head #banner {
+	height:97px;
+	background-image: url(../../images/head/head1.jpg);
+	background-repeat: no-repeat;
+	position: relative;
+}
+#head #banner .nav_b a {
+	background-image: url(../../images/head/z.gif);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 74px;
+	position: absolute;
+	left: 856px;
+	top: 70px;
+}
+#head #banner .nav_b a:hover {
+	background-image: url(../../images/head/t_a.gif);
+	background-repeat: no-repeat;
+}
+#head #banner .nav_c a {
+	background-image: url(../../images/head/t.gif);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 74px;
+	position: absolute;
+	left: 939px;
+	top: 70px;
+}
+#head #banner .nav_c a:hover {
+	background-image: url(../../images/head/z_a.gif);
+	background-repeat: no-repeat;
+}

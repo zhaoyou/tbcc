@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<!-- administrator                 -->
+<hibernate-configuration>
+
+<session-factory>
+	<property name="connection.username">sa</property>
+
+	<property name="connection.url">jdbc:sqlserver://192.168.1.134:1433;databaseName=ccdcc_db</property>
+	
+	<property name="dialect">org.tbcc.util.MySQLServerDialect</property>
+	<!-- org.tbcc.util.MySQLServerDialect -->
+	<!--  org.hibernate.dialect.SQLServerDialect-->
+	<property name="myeclipse.connection.profile">webuser</property>
+	<property name="connection.password">1q2w3e</property>
+	<property name="connection.driver_class">
+		com.microsoft.sqlserver.jdbc.SQLServerDriver
+	</property>
+
+	<property name="show_sql">true</property>
+
+	<!-- 
+		<property name="hibernate.cache.use_second_level_cache">
+		true
+		</property>-->
+	
+
+
+	<property name="current_session_context_class">thread</property>
+
+	<property name="c3p0.timeout">15000</property>
+	<property name="c3p0.min_size">5</property>
+	<property name="c3p0.max_size">30</property>
+
+
+	<mapping resource="org/tbcc/entity/TbccDiDoInfo.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccPrjType.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccNumberType.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccPrjPara.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccAlarmType.hbm.xml" />
+
+	<mapping resource="org/tbcc/entity/TbccHqType.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccDevType.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccDictory.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccAreaType.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccDataRoles.hbm.xml" />
+
+
+	<mapping resource="org/tbcc/entity/TbccRefInfo.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccUser.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccBranchType.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccAiInfo.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccTransactionRoles.hbm.xml" />
+
+
+
+	<mapping resource="org/tbcc/entity/TbccBaseRealBox.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccBaseRealCar.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccBaseRealRef.hbm.xml" />
+
+
+	<mapping resource="org/tbcc/entity/TbccClient.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccImageControls.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccProjectImages.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccCrm.hbm.xml" />
+
+
+	<mapping resource="org/tbcc/entity/TbccBaseHisCar.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccBaseHisRef.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccBaseHisStartUp.hbm.xml" />
+
+
+		<mapping resource="org/tbcc/entity/TbccBranchUserAlarmLogs.hbm.xml" />
+
+
+	<mapping resource="org/tbcc/entity/cool/TbccCompressor.hbm.xml" />
+	<mapping
+		resource="org/tbcc/entity/cool/TbccCondenserRealData.hbm.xml" />
+	<mapping resource="org/tbcc/entity/cool/TbccCcapDevType.hbm.xml" />
+	<mapping
+		resource="org/tbcc/entity/cool/TbccAirCoolerRealData.hbm.xml" />
+	<mapping
+		resource="org/tbcc/entity/cool/TbccSingleCompressorRealData.hbm.xml" />
+	<mapping
+		resource="org/tbcc/entity/cool/TbccCompressorRealData.hbm.xml" />
+	<mapping
+		resource="org/tbcc/entity/cool/TbccMultiCompressorRealData.hbm.xml" />
+	<mapping resource="org/tbcc/entity/cool/TbccCondenser.hbm.xml" />
+	<mapping resource="org/tbcc/entity/cool/TbccCompressorSet.hbm.xml" />
+	<mapping resource="org/tbcc/entity/cool/TbccAirCooler.hbm.xml" />
+	<mapping
+		resource="org/tbcc/entity/cool/TbccCcapSystemRealData.hbm.xml" />
+
+
+	<mapping resource="org/tbcc/entity/TbccRoleAndFunction.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccProjectType.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccFunction.hbm.xml" />
+
+
+
+
+	<mapping resource="org/tbcc/entity/TbccHqRoles.hbm.xml" />
+	<mapping resource="org/tbcc/entity/TbccHqUser.hbm.xml" />
+	<mapping
+		resource="org/tbcc/entity/TbccHqBranchRolesRelation.hbm.xml" />
+
+
+	<!-- 参数配置映射文件 -->
+	<mapping resource="org/tbcc/entity/config/TbccParamAction.hbm.xml" />
+	<mapping
+		resource="org/tbcc/entity/config/TbccParamVehicleAlarm.hbm.xml" />
+
+	<mapping
+		resource="org/tbcc/entity/config/TbccParamVehicleTransport.htm.xml" />
+
+
+	<!-- 扩展仓库历史数据表 -->
+	<mapping resource="org/tbcc/entity/TbccBaseHisRef_Ex.hbm.xml" />
+	
+	
+	<!-- 扩展用户注册信息表 -->
+	<mapping resource="org/tbcc/entity/TbccUserRegister.hbm.xml" />
+	
+	<!-- 扩展车载历史报警表 -->
+	<mapping resource="org/tbcc/entity/TbccBaseHisCarAlarm.hbm.xml" />
+</session-factory>
+
+</hibernate-configuration>

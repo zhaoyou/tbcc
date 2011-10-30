@@ -9,7 +9,7 @@
 <session-factory>
 	<property name="connection.username">sa</property>
 
-	<property name="connection.url">jdbc:sqlserver://192.168.1.134:1433;databaseName=ccdcc_db</property>
+	<property name="connection.url">jdbc:sqlserver://116.231.106.123:1433;databaseName=ccdcc_db</property>
 	
 	<property name="dialect">org.tbcc.util.MySQLServerDialect</property>
 	<!-- org.tbcc.util.MySQLServerDialect -->

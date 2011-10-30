@@ -282,6 +282,7 @@
 	<bean name="/carReal" class="org.fdap.action.CarRealAction">
 		<property name="carRealBiz" ref="carRealBiz"></property>
 		<property name="orgBiz" ref="orgBiz"></property>
+		<property name="hospitalBiz" ref="hospitalBiz"></property>
 	</bean>
 	
 	<bean name="/refReal" class="org.fdap.action.RefRealAction">

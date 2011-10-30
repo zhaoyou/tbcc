@@ -37,9 +37,9 @@
    			out.println("工程验证失败 ！");
    			return  ;
    		}
-   		
+   		request.getSession().setAttribute("LoginUser", "fromFdap");
    		request.setAttribute("projectName",prjType.getProjectName());
-   		request.getRequestDispatcher("fdap_customer_realmap2.jsp").forward(request,response);
+   		request.getRequestDispatcher("fdap_customer_realmap2_hnas.jsp").forward(request,response);
     %>
   </body>
 </html>

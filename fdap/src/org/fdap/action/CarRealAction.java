@@ -10,7 +10,9 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.fdap.biz.CarRealBiz;
+import org.fdap.biz.HospitalBiz;
 import org.fdap.biz.OrgBiz;
+import org.fdap.entity.FdapHospital;
 import org.fdap.entity.Fdaporg;
 import org.fdap.entity.Fdapproject;
 import org.fdap.util.BaseAction;
@@ -29,8 +31,12 @@ public class CarRealAction extends BaseAction {
 	
 	private OrgBiz orgBiz = null ;
 	
+	private HospitalBiz hospitalBiz = null;
 	
-	
+	public void setHospitalBiz(HospitalBiz hospitalBiz) {
+		this.hospitalBiz = hospitalBiz;
+	}
+
 	public OrgBiz getOrgBiz() {
 		return orgBiz;
 	}
@@ -110,6 +116,25 @@ public class CarRealAction extends BaseAction {
 		
 		
 		request.setAttribute("pNO", pNO);
+		
+		//get hospital info to carRealMap info .
+		
+		List<FdapHospital> list = hospitalBiz.getAll();
+		StringBuffer sb = new StringBuffer();
+		if(list != null && list.size() > 0) {
+			for (int i = 0; i < list.size(); i ++) {
+				FdapHospital fdapHospital = list.get(i);
+				sb.append(fdapHospital.getHospitalName() + ",");
+				sb.append(fdapHospital.getLatitude() + ",");
+				sb.append(fdapHospital.getLongitude() + ",");
+				sb.append(fdapHospital.getProjectId());
+				if ( i != list.size()-1) {
+					sb.append(";");
+				}
+			}
+			logger.info("hospital infos: " + sb.toString());
+			request.setAttribute("hospitals", sb.toString());
+		}
 		
 		return mapping.findForward("realmap");
 	}

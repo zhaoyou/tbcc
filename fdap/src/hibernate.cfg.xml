@@ -27,7 +27,7 @@
 	 
 	 <property name="connection.username">sa</property>
 
-	<property name="connection.url">jdbc:sqlserver://116.231.101.235:1433;databaseName=tbcc_fdap</property>
+	<property name="connection.url">jdbc:sqlserver://116.231.106.123:1433;databaseName=tbcc_fdap</property>
 	
 	<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
 	<!-- org.tbcc.util.MySQLServerDialect -->

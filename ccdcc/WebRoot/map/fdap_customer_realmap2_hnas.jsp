@@ -16,8 +16,115 @@
 
 <script type="text/javascript" src="http://app.mapabc.com/apis?&t=flashmap&v=2.3.1&key=30d03c0ba5c60850be655229ede0f001c17751ecce42fb81df6077eaa1031fb01a4a18c4a07047f0">
 </script>
+<script type="text/javascript" src="../script/jquery-1.4.min.js"></script>
 <script type="text/javascript">
+	//get hospital info for show in map 
+    
+   
+	 
+ var infos = new Array();
+    // parse hospitalInfo 
+    function parseInfo() {
+      var hospitalInfo = "${param.hospitals}";
+       //"长江医院,31.230693,121.556146,2001;南阳中心医院,31.23317,121.553786,2004";
+      if (hospitalInfo != "") {
+    	var hosps = hospitalInfo.split(";")
+    	for (var i in hosps) {
+    		var hosp = hosps[i].split(",");
+    		var h = new hospital(hosp[0], hosp[1], hosp[2], hosp[3]);
+    		var r = addHospitalMarker(h);
+    		h.updateTipContent();
+    		infos.push(h);
+    	} 
+      }
+      
+    }
+    
 
+
+// hospital entity
+    function hospital(name, lat, long, projectId) {
+    	this.name = name;
+    	this.lat = lat;
+    	this.long = long;
+    	this.projectId = projectId;
+    	this.carObj = null;
+    }
+    
+    /**
+    *	test show properties
+    **/
+    hospital.prototype.toString = function () {
+    		window.alert(this.name + " this.lat: " + this.lat + " this.long: " + this.long + 
+    		" this.projectId: " + this.projectId + "this.carObj" + this.carObj.option.tipOption.title);
+    };
+    
+    /**
+    *	test get update hospital ref real data.
+    **/
+    hospital.prototype.updateTipContent = function() {
+     	var p = this.projectId;
+     	var hospital = this;
+    	window.setInterval(function() {
+    	    $.get("../realref.do?ope=doRealList&projectId=" + p + "&time="+new Date().getTime(), function(data) {
+    	    	alert(data);
+    	    	hospital.carObj.option.tipOption.content = data;
+    	    	mapobj.updateOverlay(hospital.carObj);
+    	    });
+   			
+    	}, 10000);		
+    };
+    
+    	function addHospitalMarker(hospitalObj){
+		var markeroption = new MMarkerOptions();
+		var labeloption = new MLabelOptions();
+		var fontstyle = new MFontStyle();
+					
+		var tip = new MTipOptions();
+					
+					
+		fontstyle.name = "宋体";
+	    fontstyle.size = 12;
+		fontstyle.color = 0x000000;
+		fontstyle.bold = true;
+					
+					
+	   labeloption.fontStyle = fontstyle;
+	   labeloption.content = hospitalObj.name;
+	   // "T1:" + t1 + "  T2:"+t2+" \nT3:" + t3 +(unloadStatus==0?" 正在卸货":"");
+	   labeloption.hasBorder = true;
+	   labeloption.hasBackground = true;
+	   labeloption.backgroundColor = 0xffffff;
+						
+						
+						
+					
+		tip.title = hospitalObj.name + "冷库实时数据";
+		tip.content = "";//getTipMessage() ;	
+					
+		var fs = new MFontStyle();
+		fs.color = 0xffffff;
+		tip.contentFontStyle = fs;
+					
+		markeroption.labelOption = labeloption;
+	    markeroption.labelPosition = new MPoint(-28, 18);
+					
+	    markeroption.tipOption = tip;
+	    markeroption.imageAlign = 8;
+		markeroption.canShowTip = true;
+					
+		var carobj = new MMarker(new MLngLat(hospitalObj.long,hospitalObj.lat,1 ),markeroption);
+	    carobj.id = hospitalObj.projectId;
+	    hospitalObj.carObj = carobj;
+		mapobj.addOverlay(carobj);
+		return carobj;
+	}
+   
+	
+	//上面是新增医院信息的code
+    
+    
+    
 	
 	var mapobj = null;				//地图对象
             var circleobj = null  ;			//圆形对象
@@ -96,6 +203,10 @@
                 getData() ; 						//获取数据
                 
                 mytime =  window.setInterval("getData()",parseInt(moveInterval)) ;	//设置定时器，每隔10s调用 
+                
+                
+                //add hospital info.
+                parseInfo();
            
             }
             

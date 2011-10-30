@@ -45,7 +45,7 @@
       </table>
     </div>
     <div class="bottom"	style="padding-top:0px; margin-top:0px;">
-      	<iframe scrolling="no" src="http://www.thermoberg.com/ccdcc/map/fdap_customer_realmap.jsp?projectId=${pNO }" width=100% height=540 frameborder=0></iframe >
+      	<iframe scrolling="no" src="http://www.thermoberg.com/ccdcc/map/fdap_customer_realmap.jsp?projectId=${pNO }&hospitals=${hospitals }" width=100% height=540 frameborder=0></iframe >
     	<%-- <iframe scrolling="no" src="http://localhost:8888/ccdcc/map/fdap_customer_realmap.jsp?projectId=${pNO }" width=100% height=540 frameborder=0></iframe > --%>
     </div>
   </div>

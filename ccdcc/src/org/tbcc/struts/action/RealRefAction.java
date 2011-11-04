@@ -2,6 +2,7 @@ package org.tbcc.struts.action;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -1038,69 +1039,29 @@ public class RealRefAction extends BaseAction {
 				
 				List<Integer> portList = null  ;   //用来存放每一个冷库的对应的探头号
 				
-				int number = 0 ;					//显示每一条记录编号
+				Map<Integer, String> valueMap = null; //save one net all ai real data.
+
 				
-				/**
-				 * 为了控制不同楼层的数据显示
-				 */
+				StringBuffer result = new StringBuffer();
 				
-				int floorNo = 0 ;					//定义一个变量用来保存楼层的信息，用于控制楼层信息
-				int floorType = 0 ;
-				
-				TbccRefInfo r = refList.get(0) ;    //默认赋值给第一个了
-				
-				floorNo = r.getFloorNo() ;
-				floorType= r.getFloorType() ;
-				
-				
-				out.println("<h5>"+getFloorInfo(r.getFloorNo(), r.getFloorType())+"</h5>");
-				out.println("<hr color='pink' width='100%'>");
 				
 				//首先循环遍历所有的冷库
 				for (TbccRefInfo refInfo : refList) {
 					
-					 //如果不属于同一个楼层，则分隔开来了
-					  if(!refInfo.getFloorNo().equals(floorNo) || !refInfo.getFloorType().equals(floorType)){
-						   out.println("<div align='center'><h5>"+getFloorInfo(refInfo.getFloorNo(), refInfo.getFloorType())+"</h5></div>");
-						   out.println("<hr color='pink' width='100%'>");
-						   
-					  } 
-				
-					  floorNo = refInfo.getFloorNo() ;
-					  floorType = refInfo.getFloorType() ;
-					  
-					out.println("<table width='990' border='0'align='center' cellpadding='0'cellspacing='0' valign='top'>");
-					out.println("<tr valign='top' HEIGHT='23' bgcolor='#DEDEDE' CLASS=Page_tools_bar>");
-					out.println("<td align='center' CLASS=Page_title width='36' >序号</td>");
-					out.println("<td align='center' CLASS=Page_title valign='middle' width='110'>冷库名称</td>");
-					out.println("<td align='center' CLASS=Page_title valign='middle' width='90'>报警状态</td>");
-					out.println("<td align='center' CLASS=Page_title valign='middle' width='90'>激活状态</td>");
-					out.println("<td align='center' CLASS=Page_title valign='middle' width='90'>连接状态</td>");
-					
+					result.append("<b>" + refInfo.getRefName() + "<b>: <br/>");
 					portList = new ArrayList<Integer>();
+					valueMap = new HashMap<Integer, String>();
 					   //循环探头
 						for (TbccAiInfo aiInfo : aiList) {
 								//如果netId，和 refId 都相同，则添加列头
 							if(refInfo.getNetid().equals(aiInfo.getNetid()) && refInfo.getRefid().equals(aiInfo.getRefid())){
-								out.println("<td align='center' CLASS=Page_title valign='middle' width='65' >"+aiInfo.getPortName()+"</td>");
 								portList.add(aiInfo.getPortNo());
+								valueMap.put(aiInfo.getPortNo(), aiInfo.getPortName());
 							}
 						}
-						for(int n=0;n<12-portList.size();n++){
-							out.println("<td >&nbsp;&nbsp;</td>");
-						}
-						out.println("</tr>");
 						
-					//列头添加完毕!!!!!!!!!!
-					
-					//遍历整个实时数据的集合
 						
-						 //保证有数据的情况了
-						  out.println("<tr align='center'>");
-							out.println("<td>"+(++number)+"</td>");
-							out.println("<td>"+refInfo.getRefName()+"</td>");
-						
-						boolean flag = true ; //定义一个变量用来控制有没有找的相应的数据
+						boolean flag = true ; //define not find ref real data
 						
 					  for (TbccBaseRealRef realData : realList) {
 						  
@@ -1108,63 +1069,22 @@ public class RealRefAction extends BaseAction {
 						if(refInfo.getNetid().equals(realData.getNeiId())){
 							
 							flag = false ;
-							//报警状态
+							//报警状态 may be show 
 							Integer alarmstate = realData.getAllRefAlarmStatus()[refInfo.getRefid()-1];
 							
-							if(realData.getConnectStatus().equals(RealRefBiz.CONNECTION)){
-								if(alarmstate.equals(RealRefBiz.ALARM)){				//报警
-									out.println("<td align='center'><img src='img/menu/win/red.gif' title='表示处于报警状态' class='op_button' /></td>");						
-								}else if(alarmstate.equals(RealRefBiz.NORMAL)){		//正常
-									out.println("<td align='center'><img src='img/menu/win/blue.gif' title='表示处于正常状态' class='op_button' /></td>");						
-								}else if (alarmstate.equals(RealRefBiz.PREALARM)){
-									out.println("<td align='center'><img src='img/menu/win/orange.jpg' title='表示处于预警状态' class='op_button' /></td>");
-								}else												
-									out.println("<td>* * *</td>");
-							}else{													//断开连接了
-									out.println("<td>* * *</td>");
-							}
-							
-							
-							
-							
-							//运行状态---改成了激活状态
-							Integer runstate = realData.getAllRefRunStatus()[refInfo.getRefid()-1];
-							
-							if(realData.getConnectStatus().equals(RealRefBiz.CONNECTION)){
-								if(runstate.equals(RealRefBiz.STOP))  				//停止
-									out.println("<td align='center'><img src='img/menu/msie_doc_mo.gif' title='表示冷库处于未激活状态' class='op_button' /></td>");						
-								else if (runstate.equals(RealRefBiz.RUN))			//运行
-									out.println("<td align='center'><img src='img/menu/msie_doc.GIF' title='表示冷库处于激活状态' class='op_button' /></td>");
-								else												
-									out.println("<td>* * *</td>");
-							}else{													//断开了连接
-									out.println("<td>* * *</td>");
-							}
-							
-							
-							//连接状态
-							
-							if(realData.getConnectStatus().equals(RealRefBiz.CONNECTION)){
-								out.println("<td>连接</td>");
-							}else{
-								out.println("<td>断开</td>");
-							}
-								
-							//处理数据的状态
-							for(Integer integer:portList){
-								String str="* * *";
+							for (Integer integer : valueMap.keySet()) {
 								if(realData.getConnectStatus().equals(RealRefBiz.CONNECTION)){
 									Double data = realData.getAllAi()[integer-1];
 									if(data==-300)
 									{
-										str="---";
+									  result.append(valueMap.get(integer) + ": ---  " );
+									} else {
+									  result.append(valueMap.get(integer) + ": " + data.toString()+ "  ");
 									}
-									else str=data.toString();
 								}
-								
-								out.println("<td>"+str+"</td>");
+									
 							}
-							
+									
 							//只要满足一个NetId相等了，相等就跳出循环就OK
 							
 							break ;  
@@ -1173,15 +1093,13 @@ public class RealRefAction extends BaseAction {
 					}  //end realdataList ;
 					  
 					if(flag)			//加入flag = true 表明该冷库现在处于初始阶段，没有任何数据
-					{
-						for(int k = 0 ;k<3+portList.size();k++)
-							out.println("<td>****</td>");
-					}
-					 out.println("</tr>");
-					out.println("</table>");
-						
-				} 	//end of refList	
+					  for (Integer integer : valueMap.keySet()) {
+						result.append(valueMap.get(integer) + ": ***  " );
+					  }
+					result.append("<br/>");	
+				}	
 				
+				out.print(out.toString());
 				return null ;			
 			}
 			
